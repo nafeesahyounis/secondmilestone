@@ -10,6 +10,8 @@ let openedCards = [];
 let hasFlippedCard = true;
 let firstCard, secondCard;
 var counter = 0;
+var card1;
+var card2;
 
 
 //start game
@@ -23,27 +25,48 @@ function displayCard() {
     if (counter==0){
         counter=1;
         this.children[0].classList.add('show-img');
+        card1=this.children[0];
     }
    else if (counter==1){
         counter=2;
         this.children[0].classList.add('show-img');
+        card2=this.children[0];
+        checkForMatch();
+        counter=0;
     }
+
 
 
 }
 
 
 
-/*function checkForMatch() {
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disableCards();
-        return;
-    }
+function checkForMatch() {
+
+       if (card1.src==card2.src){
+           console.log("match");
+           match();
+       }
+    else{
+        console.log("mismatch");
+        mismatched();
+       }
 }
 
+function mismatched(){
+    setTimeout(flipCards,1000);
+}
+function match(){
+    card1.parentElement.removeEventListener('click',displayCard);
+    card2.parentElement.removeEventListener('click',displayCard);
+}
+function flipCards(){
+    card1.classList.remove('show-img');
+    card2.classList.remove('show-img');
+}
 //if two cards have the same data-attribute, remove event listener
 
-function disableCards() {
+/*function disableCards() {
     firstCard.removeEventListener('click', displayCard);
     secondCard.removeEventListener('click', displayCard);
 }
