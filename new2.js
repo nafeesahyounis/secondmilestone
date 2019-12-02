@@ -7,6 +7,9 @@ let cardElementsArray = [...cardElements];
 let imgElements = document.getElementsByClassName('game-card-img');
 let imgElementsArray = [...imgElements];
 let openedCards = [];
+let hasFlippedCard = true;
+let firstCard, secondCard;
+var counter = 0;
 
 
 //start game
@@ -14,15 +17,51 @@ let openedCards = [];
 function startGame(){
     for(let i = 0; i < cardElementsArray.length; i++){
         cardElementsArray[i].addEventListener('click',displayCard)
-}}
+    }}
 
-function displayCard(){
-    this.children[0].classList.toggle('show-img');
-    cardOpen(this);
+function displayCard() {
+    if (counter==0){
+        counter=1;
+        this.children[0].classList.add('show-img');
+    }
+   else if (counter==1){
+        counter=2;
+        this.children[0].classList.add('show-img');
+    }
+
 
 }
 
-function cardOpen(card){
+
+
+/*function checkForMatch() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards();
+        return;
+    }
+}
+
+//if two cards have the same data-attribute, remove event listener
+
+function disableCards() {
+    firstCard.removeEventListener('click', displayCard);
+    secondCard.removeEventListener('click', displayCard);
+}
+
+/*function cardOpen(card){
+    openedCards.push(card);
+    let len = openedCards.length;
+
+}
+
+//if two cards have the same data-attribute, remove event listener
+
+function disableCards() {
+    firstCard.removeEventListener('click', displayCard);
+    secondCard.removeEventListener('click', displayCard);
+}
+
+/*function cardOpen(card){
     openedCards.push(card);
     let len = openedCards.length;
     if(len >2) {
@@ -33,11 +72,11 @@ function cardOpen(card){
 
         }
 
-        }
+    }
 }
 
 
-/*function unflip(){
+function unflip(){
     for(i=0; i<len; i++) {
             openedCards[i].children[0].classList.remove("show-img")
     /*openedCards[0].classList.remove("show-img", "open");
