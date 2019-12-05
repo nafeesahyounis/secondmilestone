@@ -30,12 +30,13 @@ function shuffle(array) {
 
 }
 
-function lunch(){
-    var lunch = ['sandwich', 'soda', 'chips', 'cookie'];
+function shuffleImages(){
 
-// Shuffle lunch
-    shuffle(lunch);
-    console.log(lunch);
+var shuffledImages = shuffle(imgElementsArray);
+console.log(shuffledImages);
+    for(i=0; i<shuffledImages.length; i++) {
+//add the shuffled images to each card
+        cardElements[i].appendChild(shuffledImages[i])};
 
 }
 
@@ -100,6 +101,6 @@ function unflipCards(){
 window.onload = function () {
     setTimeout(function() {
         startGame()
-        lunch();
+        shuffleImages();
     }, 1200);
 }
