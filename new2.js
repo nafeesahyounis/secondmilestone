@@ -12,11 +12,38 @@ var card2;
 
 
 //start game
+function shuffle(array) {
+    let currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+
+    while (currentIndex !==0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+
+
+}
+
+function lunch(){
+    var lunch = ['sandwich', 'soda', 'chips', 'cookie'];
+
+// Shuffle lunch
+    shuffle(lunch);
+    console.log(lunch);
+
+}
 
 function startGame(){
-    for(let i = 0; i < cardElementsArray.length; i++){
+
+   for(let i = 0; i < cardElementsArray.length; i++){
         cardElementsArray[i].addEventListener('click',displayCard)
-    }}
+   }}
 
 function displayCard() {
     if (counter==0){
@@ -49,9 +76,9 @@ function checkForMatch() {
         mismatched();
        }
 }
-
+// make sure that when cards flip back over there is a 1 second delay so that player can see both cards. Also initialise 'unflip'
 function mismatched(){
-    setTimeout(flipCards,1000);
+    setTimeout(unflipCards,1000);
 }
 
 //if two cards have the same src element, remove Event Listener
@@ -59,7 +86,9 @@ function match(){
     card1.parentElement.removeEventListener('click',displayCard);
     card2.parentElement.removeEventListener('click',displayCard);
 }
-function flipCards(){
+
+//un-flip cards that don't match
+function unflipCards(){
     card1.classList.remove('show-img');
     card2.classList.remove('show-img');
 }
@@ -71,5 +100,6 @@ function flipCards(){
 window.onload = function () {
     setTimeout(function() {
         startGame()
+        lunch();
     }, 1200);
 }
