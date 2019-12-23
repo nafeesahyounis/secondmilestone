@@ -9,6 +9,7 @@ let imgElementsArray = [...imgElements];
 var counter = 0;
 var card1;
 var card2;
+var restartButton= document.getElementById('restartButton');
 
 
 //start game
@@ -40,6 +41,14 @@ console.log(shuffledImages);
 
 }
 
+function restart(){
+    function shuffleUnflip(){
+        shuffleImages();
+        unflipCards();
+    }
+    restartButton.addEventListener('click',shuffleUnflip);
+}
+
 function startGame(){
 
    for(let i = 0; i < cardElementsArray.length; i++){
@@ -59,6 +68,8 @@ function displayCard() {
         checkForMatch();
         counter=0;
     }
+
+
 
 
 
@@ -102,5 +113,6 @@ window.onload = function () {
     setTimeout(function() {
         startGame()
         shuffleImages();
+        restart();
     }, 1200);
 }
