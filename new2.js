@@ -10,6 +10,7 @@ var counter = 0;
 var card1;
 var card2;
 var restartButton= document.getElementById('restartButton');
+var score = 0;
 
 
 //start game
@@ -40,19 +41,26 @@ console.log(shuffledImages);
         cardElements[i].appendChild(shuffledImages[i])};
 
 }
-
+//make cards reshuffle when restart button is clicked
 function restart(){
-    function shuffleUnflip(){
-        shuffleImages();
-        unflipCards();
+
+    function positionA(){
+        if (card1.src==card2.src){
+            console.log("mismatched");
+            unflipCards();
+        }
     }
-    restartButton.addEventListener('click',shuffleUnflip);
+
+    restartButton.addEventListener('click',shuffleImages,positionA);
+
 }
 
 function startGame(){
 
    for(let i = 0; i < cardElementsArray.length; i++){
         cardElementsArray[i].addEventListener('click',displayCard)
+        cardElementsArray[i].addEventListener('click',countScore)
+
    }}
 
 function displayCard() {
@@ -73,6 +81,14 @@ function displayCard() {
 
 
 
+
+}
+
+//counter goes up one every time you click a card
+
+function countScore() {
+    score++;
+    console.log(score)
 }
 
 
