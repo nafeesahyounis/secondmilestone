@@ -9,9 +9,9 @@ let imgElementsArray = [...imgElements];
 var counter = 0;
 var card1;
 var card2;
-var restartButton= document.getElementById('restartButton');
 var score = 0;
 var totalGameMoves=document.getElementById('totalGameMoves')
+var restartButton = document.getElementById('restartButton')
 
 
 //start game
@@ -35,34 +35,27 @@ function shuffle(array) {
 
 function shuffleImages(){
 
-var shuffledImages = shuffle(imgElementsArray);
-console.log(shuffledImages);
+    var shuffledImages = shuffle(imgElementsArray);
+    console.log(shuffledImages);
     for(i=0; i<shuffledImages.length; i++) {
 //add the shuffled images to each card
         cardElements[i].appendChild(shuffledImages[i])};
 
 }
-//make cards reshuffle when restart button is clicked
-function restart(){
+//restart game when restart button is clicked
 
-    function positionA(){
-        if (card1.src==card2.src){
-            console.log("mismatched");
-            unflipCards();
-        }
+
+    restartButton.addEventListener('click',location.reload.bind(location));
+
+
+function startGame() {
+
+    for (let i = 0; i < cardElementsArray.length; i++) {
+        cardElementsArray[i].addEventListener('click', displayCard)
+        cardElementsArray[i].addEventListener('click', countScore)
+
     }
-
-    restartButton.addEventListener('click',shuffleImages,positionA);
-
 }
-
-function startGame(){
-
-   for(let i = 0; i < cardElementsArray.length; i++){
-        cardElementsArray[i].addEventListener('click',displayCard)
-        cardElementsArray[i].addEventListener('click',countScore)
-
-   }}
 
 function displayCard() {
     if (counter==0){
@@ -127,9 +120,8 @@ function unflipCards(){
 
 
 window.onload = function () {
-    setTimeout(function() {
-        startGame()
+        setTimeout(function() {
+        startGame();
         shuffleImages();
-        restart();
     }, 1200);
 }
