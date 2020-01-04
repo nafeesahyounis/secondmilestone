@@ -10,8 +10,14 @@ var counter = 0;
 var card1;
 var card2;
 var score = 0;
-var totalGameMoves=document.getElementById('totalGameMoves')
-var restartButton = document.getElementById('restartButton')
+var totalGameMoves=document.getElementById('totalGameMoves');
+var restartButton = document.getElementById('restartButton');
+var easyButton= document.getElementById('easy-button');
+var mediumButton= document.getElementById('medium-button');
+var mediumRow=document.getElementById('row-medium');
+
+
+
 
 
 //start game
@@ -47,7 +53,7 @@ function shuffleImages(){
 
     restartButton.addEventListener('click',location.reload.bind(location));
 
-
+//display cards when game starts and initiate move counter
 function startGame() {
 
     for (let i = 0; i < cardElementsArray.length; i++) {
@@ -116,6 +122,16 @@ function unflipCards(){
 }
 
 
+//change difficulty selection
+
+    mediumButton.addEventListener('click', changeToMedium);
+
+
+function changeToMedium(){
+    mediumRow.classList.remove('hidden');
+    console.log("hello world");
+
+}
 
 
 
