@@ -1,37 +1,37 @@
 .mystyle {
- background-color: #bbb;
-  color: black;
-  background-image: url("cat.png");
-  background-size: 500px 300px
+    background-color: #bbb;
+    color: black;
+    background-image: url("cat.png");
+    background-size: 500px 300px
 }
 
 .mystyle2 {
-  background-color: coral;
-  padding: 50px;
+    background-color: coral;
+    padding: 50px;
 }
 
 //newindex
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+  }
 
 body {
     font-family: monospace, Arial, Helvetica, sans-serif;
@@ -85,6 +85,13 @@ em {
     animation: animateShowImage 0.4s linear alternate;
 }
 
+.visibility {
+    visibility:visible;
+}
+
+.hidden{
+    visibility:hidden;
+}
 
 
 
