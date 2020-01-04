@@ -11,6 +11,7 @@ var card1;
 var card2;
 var restartButton= document.getElementById('restartButton');
 var score = 0;
+var totalGameMoves=document.getElementById('totalGameMoves')
 
 
 //start game
@@ -88,7 +89,7 @@ function displayCard() {
 
 function countScore() {
     score++;
-    console.log(score)
+    totalGameMoves.innerHTML=score;
 }
 
 
