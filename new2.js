@@ -15,6 +15,8 @@ var restartButton = document.getElementById('restartButton');
 var easyButton= document.getElementById('easy-button');
 var mediumButton= document.getElementById('medium-button');
 var mediumRow=document.getElementById('row-medium');
+var hardButton= document.getElementById('hard-button');
+var hardRow=document.getElementById('row-hard');
 
 
 
@@ -124,15 +126,35 @@ function unflipCards(){
 
 //change difficulty selection
 
+
+easyButton.addEventListener('click', changeToEasy);
+
+
+function changeToEasy(){
+    mediumRow.classList.add('hidden');
+    hardRow.classList.add('hidden');
+    console.log("hello world");
+
+}
+
     mediumButton.addEventListener('click', changeToMedium);
 
 
 function changeToMedium(){
     mediumRow.classList.remove('hidden');
+    hardRow.classList.add('hidden');
     console.log("hello world");
 
 }
+hardButton.addEventListener('click', changeToHard);
 
+
+function changeToHard(){
+    mediumRow.classList.remove('hidden');
+    hardRow.classList.remove('hidden');
+    console.log("hello world");
+
+}
 
 
 window.onload = function () {
