@@ -1,14 +1,4 @@
-.mystyle {
-    background-color: #bbb;
-    color: black;
-    background-image: url("cat.png");
-    background-size: 500px 300px
-}
 
-.mystyle2 {
-    background-color: coral;
-    padding: 50px;
-}
 
 //newindex
 
@@ -33,10 +23,14 @@
       vertical-align: baseline;
   }
 
-body {
-    font-family: monospace, Arial, Helvetica, sans-serif;
-}
 
+body {
+    background: url(background-sky.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 ol, ul {
     list-style: none;
 }
@@ -53,7 +47,7 @@ em {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #A1887F;
+    background-color: white;
     border-radius: 0.3em;
     box-shadow: 0 5px 5px #808080;
 }
@@ -66,7 +60,7 @@ em {
 .game-card {
     width: 4.5em;
     height: 4.5em;
-    background-color: #212121;
+    background-color: white;
     border-radius: 0.3em;
     margin: 0.8em;
     box-shadow: 2px 0 10px #212121;
