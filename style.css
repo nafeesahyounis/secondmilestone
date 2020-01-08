@@ -43,14 +43,19 @@ em {
 }
 
 body{
-    background: url(background-sky.png) no-repeat center center fixed;
+    background: url(background-waterfall.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    text-align:center;
 }
 
 .game-menu{
+    text-align:center;
+}
+
+.game-info{
     height:100vh;
     background-color:#837789;
 
@@ -61,7 +66,7 @@ body{
     margin-right: auto;
     border-radius: 0.3em;
     box-shadow: 0 5px 5px #808080;
-    background: url(background-sky.png) no-repeat center center fixed;
+    background: url(background-waterfall.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
