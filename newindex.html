@@ -10,93 +10,100 @@
 
 </head>
 <body>
-<main class="container-fluid">
-    <div class="row game-menu-container">
-        <div class="col-lg-4 game-menu jumbotron">
-            <p class="restart-button-div">
-                <button class="restart-button brown-button" id="restartButton">Restart ↻</button>
-            </p>
-            <p>You completed the game using <span id="totalGameMoves"></span> moves
-                <br>in <span id="totalGameTime"></span>
-            </p>
+<main>
+    <div class="row game-menu-and-board-container">
+        <div class="col-lg-4 game-menu container-fluid">
+            <div class="moves-made">
+                <h2>Moves Made</h2>
+                <p>You completed the game using <span id="totalGameMoves"></span> moves</p>
+            </div>
+            <div>
+                <h2>Choose Your Level: </h2>
+                <p class="modal-footer">
+                    <button id="easy-button">Easy</button> <button id="medium-button">Medium</button> <button id="hard-button">Hard</button>
+                </p>
 
-            <p class="modal-footer">
-                <button id="easy-button">Easy</button> <button id="medium-button">Medium</button> <button id="hard-button">Hard</button>
-            </p>
-    </div>
+            </div>
+            <div>
+                <p class="restart-button-div">
+                    <button class="restart-button brown-button" id="restartButton">Restart ↻</button>
+                    <button class="restart-button brown-button">Back to Main Menu</button>
+
+                </p>
+            </div>
+
+        </div>
 
 
 
-<div class="col-lg-8 game-board">
-            <table class="game-board">
-                <tbody class="game-grid">
-                    <tr class="game-grid-row row-easy">
-                        <td class="game-card">
-                            <img class="game-card-img" src="cat.png" alt="cake1">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="little-cat.png" alt="cake2">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="cat-in-a-pan.png" alt="cake3">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="cuty-cats.png" alt="cake4">
-                        </td>
-                    </tr>
-                    <tr class="game-grid-row row-easy">
-                        <td class="game-card">
-                            <img class="game-card-img" src="little-cat.png" alt="cake5">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="cat-in-a-pan.png" alt="cake6">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="cuty-cats.png" alt="cake7">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="cat.png" alt="cake8">
-                        </td>
-                    </tr>
-                    <tr class="game-grid-row hidden" id="row-medium">
-                        <td class="game-card">
-                            <img class="game-card-img" src="sleeping-kitty.png" alt="cake1">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="sleeping-kitty.png" alt="cake2">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="cat-reading.png" alt="cake3">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="cat-reading.png" alt="cake4">
-                        </td>
-                    </tr>
-                    <tr class="game-grid-row hidden" id="row-hard">
-                        <td class="game-card">
-                            <img class="game-card-img" src="island.png" alt="cake5">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="island.png" alt="cake6">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="pirate.png" alt="cake7">
-                        </td>
-                        <td class="game-card">
-                            <img class="game-card-img" src="pirate.png" alt="cake8">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-lg-8 game-board container-fluid">
+            <div class="game-board">
+                <div class="col-3 game-grid-row row-easy">
+                    <div class="game-card">
+                        <img class="game-card-img" src="cat.png" alt="cake1">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="little-cat.png" alt="cake2">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="cat-in-a-pan.png" alt="cake3">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="cuty-cats.png" alt="cake4">
+                    </div>
+                </div>
+                <div class="game-grid-row row-easy col-3">
+                    <div class="game-card">
+                        <img class="game-card-img" src="little-cat.png" alt="cake5">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="cat-in-a-pan.png" alt="cake6">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="cuty-cats.png" alt="cake7">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="cat.png" alt="cake8">
+                    </div>
+                </div>
+                <div class="game-grid-row hidden col-3" id="row-medium">
+                    <div class="game-card">
+                        <img class="game-card-img" src="sleeping-kitty.png" alt="cake1">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="sleeping-kitty.png" alt="cake2">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="cat-reading.png" alt="cake3">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="cat-reading.png" alt="cake4">
+                    </div>
+                </div>
+                <div class="game-grid-row hidden col-3" id="row-hard">
+                    <div class="game-card">
+                        <img class="game-card-img" src="island.png" alt="cake5">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="island.png" alt="cake6">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="pirate.png" alt="cake7">
+                    </div>
+                    <div class="game-card">
+                        <img class="game-card-img" src="pirate.png" alt="cake8">
+                    </div>
+                </div>
+            </div>
 
-    </div>
+        </div>
     </div>
 </main>
 
-    </body>
+</body>
 
-        <script src="new2.js">
+<script src="new2.js">
 
-        </script>
+</script>
 
 </html>
