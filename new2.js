@@ -58,8 +58,10 @@ function restartGame(){
 
     for (let i = 0; i < imgElementsArray.length; i++) {
     imgElementsArray[i].classList.remove('show-img');}
-    //document.getElementsByClassName("game-card-img")[0].classList.remove("show-img");
-
+    if (score>=1){
+        score=0;
+        totalGameMoves.innerHTML=score;
+    }
 
 }
 
@@ -141,8 +143,10 @@ easyButton.addEventListener('click', changeToEasy);
 function changeToEasy(){
     mediumRow.classList.add('hidden');
     hardRow.classList.add('hidden');
-    console.log("hello world");
-
+    if (score>=1){
+        score=0;
+        totalGameMoves.innerHTML=score;
+    }
 }
 
     mediumButton.addEventListener('click', changeToMedium);
@@ -151,8 +155,10 @@ function changeToEasy(){
 function changeToMedium(){
     mediumRow.classList.remove('hidden');
     hardRow.classList.add('hidden');
-    console.log("hello world");
-
+    if (score>=1){
+        score=0;
+        totalGameMoves.innerHTML=score;
+    }
 }
 hardButton.addEventListener('click', changeToHard);
 
@@ -160,8 +166,10 @@ hardButton.addEventListener('click', changeToHard);
 function changeToHard(){
     mediumRow.classList.remove('hidden');
     hardRow.classList.remove('hidden');
-    console.log("hello world");
-
+    if (score>=1){
+        score=0;
+        totalGameMoves.innerHTML=score;
+    }
 }
 
 
