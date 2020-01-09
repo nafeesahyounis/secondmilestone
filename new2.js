@@ -21,7 +21,6 @@ var hardRow=document.getElementById('row-hard');
 
 
 
-
 //start game
 function shuffle(array) {
     let currentIndex = array.length,
@@ -53,7 +52,16 @@ function shuffleImages(){
 //restart game when restart button is clicked
 
 
-    restartButton.addEventListener('click',location.reload.bind(location));
+    restartButton.addEventListener('click',restartGame);
+
+function restartGame(){
+
+    for (let i = 0; i < imgElementsArray.length; i++) {
+    imgElementsArray[i].classList.remove('show-img');}
+    //document.getElementsByClassName("game-card-img")[0].classList.remove("show-img");
+
+
+}
 
 //display cards when game starts and initiate move counter
 function startGame() {
