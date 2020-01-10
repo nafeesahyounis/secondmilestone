@@ -4,8 +4,14 @@
 
 let cardElements = document.getElementsByClassName('game-card');
 let cardElementsArray = [...cardElements];
+let easyElements = document.getElementsByClassName('easy-card');
+let easyElementsArray = [...easyElements];
+
 let imgElements = document.getElementsByClassName('game-card-img');
 let imgElementsArray = [...imgElements];
+let easyCards = document.getElementsByClassName('easy');
+let easyArray = [...easyCards];
+
 var counter = 0;
 var card1;
 var card2;
@@ -15,6 +21,8 @@ var restartButton = document.getElementById('restartButton');
 var easyButton= document.getElementById('easy-button');
 var mediumButton= document.getElementById('medium-button');
 var mediumRow=document.getElementById('row-medium');
+var easyRow=document.getElementById('row-easy');
+
 var hardButton= document.getElementById('hard-button');
 var hardRow=document.getElementById('row-hard');
 
@@ -42,11 +50,21 @@ function shuffle(array) {
 
 function shuffleImages(){
 
+    var shuffledImages = shuffle(easyArray);
+    console.log(shuffledImages);
+    for(i=0; i<shuffledImages.length; i++) {
+//add the shuffled images to each card
+        easyElements[i].appendChild(shuffledImages[i])};
+
+
+}
+
+function shuffleAllImages(){
     var shuffledImages = shuffle(imgElementsArray);
     console.log(shuffledImages);
     for(i=0; i<shuffledImages.length; i++) {
 //add the shuffled images to each card
-        cardElements[i].appendChild(shuffledImages[i])};
+        imgElements[i].appendChild(shuffledImages[i])};
 
 }
 //restart game when restart button is clicked
@@ -61,6 +79,14 @@ function restartGame(){
     if (score>=1){
         score=0;
         totalGameMoves.innerHTML=score;
+    }
+    startGame();
+    //if(mediumRow.classList.contains("hidden")){
+     //   shuffleImages();
+    //    shuffleAllImages();
+    //}
+    if(hardRow.classList.contains("hidden")){
+        console.log("apple")
     }
 
 }
@@ -143,10 +169,17 @@ easyButton.addEventListener('click', changeToEasy);
 function changeToEasy(){
     mediumRow.classList.add('hidden');
     hardRow.classList.add('hidden');
+
+    //this will later be used in the shuffle function so that we can shuffle cards based on whether or not they have hidden in their classList
+    if(easyRow.classList.contains("house")){
+        console.log("shoe");
+    }
+
     if (score>=1){
         score=0;
         totalGameMoves.innerHTML=score;
     }
+    restartGame();
 }
 
     mediumButton.addEventListener('click', changeToMedium);
@@ -159,6 +192,7 @@ function changeToMedium(){
         score=0;
         totalGameMoves.innerHTML=score;
     }
+    let imgElementsArray = [...imgElements];
 }
 hardButton.addEventListener('click', changeToHard);
 
@@ -166,6 +200,7 @@ hardButton.addEventListener('click', changeToHard);
 function changeToHard(){
     mediumRow.classList.remove('hidden');
     hardRow.classList.remove('hidden');
+    hardRow.classList.add('shuffle');
     if (score>=1){
         score=0;
         totalGameMoves.innerHTML=score;
