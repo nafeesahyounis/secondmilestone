@@ -11,6 +11,9 @@ let imgElements = document.getElementsByClassName('game-card-img');
 let imgElementsArray = [...imgElements];
 let easyCards = document.getElementsByClassName('easy');
 let easyArray = [...easyCards];
+let mediumCards= document.getElementsByClassName("medium");
+let mediumArray = [...mediumCards];
+let mediumElements = document.getElementsByClassName('medium-card');
 
 var counter = 0;
 var card1;
@@ -58,38 +61,50 @@ function shuffleImages(){
 
 
 }
-
-function shuffleAllImages(){
-    var shuffledImages = shuffle(imgElementsArray);
+function shuffleMediumImages(){
+    var shuffledImages = shuffle(mediumElementsArray);
     console.log(shuffledImages);
     for(i=0; i<shuffledImages.length; i++) {
 //add the shuffled images to each card
-        imgElements[i].appendChild(shuffledImages[i])};
+        mediumElements[i].appendChild(shuffledImages[i])};
+
+}
+function shuffleAllImages(){
+    var shuffledImagesHard = shuffle(imgElementsArray);
+    console.log(shuffledImagesHard);
+    for(i=0; i<shuffledImagesHard.length; i++) {
+//add the shuffled images to each card
+        cardElements[i].appendChild(shuffledImagesHard[i])};
+        debugger;
 
 }
 //restart game when restart button is clicked
 
 
-    restartButton.addEventListener('click',restartGame);
+    //restartButton.addEventListener('click',restartGame);
 
-function restartGame(){
+//function restartGame(){
 
-    for (let i = 0; i < imgElementsArray.length; i++) {
-    imgElementsArray[i].classList.remove('show-img');}
-    if (score>=1){
-        score=0;
-        totalGameMoves.innerHTML=score;
-    }
-    startGame();
+    //for (let i = 0; i < imgElementsArray.length; i++) {
+    //imgElementsArray[i].classList.remove('show-img');}
+    //if (score>=1){
+    //    score=0;
+    //    totalGameMoves.innerHTML=score;
+   // }
+   // startGame();
     //if(mediumRow.classList.contains("hidden")){
      //   shuffleImages();
     //    shuffleAllImages();
     //}
-    if(hardRow.classList.contains("hidden")){
-        console.log("apple")
-    }
+   // if(hardRow.classList.contains("shuffle")){
+    //   shuffleAllImages();
+    //   hardRow.classList.remove('shuffle');
+    //}
+    //if(easyRow.classList.contains("shuffle")) {
+   //     shuffleImages();
+  //  }
 
-}
+//}
 
 //display cards when game starts and initiate move counter
 function startGame() {
@@ -169,17 +184,26 @@ easyButton.addEventListener('click', changeToEasy);
 function changeToEasy(){
     mediumRow.classList.add('hidden');
     hardRow.classList.add('hidden');
+    hardRow.classList.remove('shuffle');
+    mediumRow.classList.remove('shuffle')
+    easyRow.classList.add('shuffle');
+
+
 
     //this will later be used in the shuffle function so that we can shuffle cards based on whether or not they have hidden in their classList
     if(easyRow.classList.contains("house")){
         console.log("shoe");
     }
 
+
+    startGame();
+    for (let i = 0; i < imgElementsArray.length; i++) {
+    imgElementsArray[i].classList.remove('show-img');}
     if (score>=1){
-        score=0;
+       score=0;
         totalGameMoves.innerHTML=score;
-    }
-    restartGame();
+     }
+    shuffleImages();
 }
 
     mediumButton.addEventListener('click', changeToMedium);
@@ -188,11 +212,12 @@ function changeToEasy(){
 function changeToMedium(){
     mediumRow.classList.remove('hidden');
     hardRow.classList.add('hidden');
+    mediumRow.classList.add('shuffle');
+
     if (score>=1){
         score=0;
         totalGameMoves.innerHTML=score;
     }
-    let imgElementsArray = [...imgElements];
 }
 hardButton.addEventListener('click', changeToHard);
 
@@ -201,10 +226,15 @@ function changeToHard(){
     mediumRow.classList.remove('hidden');
     hardRow.classList.remove('hidden');
     hardRow.classList.add('shuffle');
+
+    startGame();
+    for (let i = 0; i < imgElementsArray.length; i++) {
+        imgElementsArray[i].classList.remove('show-img');}
     if (score>=1){
         score=0;
         totalGameMoves.innerHTML=score;
     }
+    shuffleAllImages();
 }
 
 
