@@ -1,16 +1,19 @@
 
 
 //game variables
-
+//game-card for all images. Images are appended to this.
 let cardElements = document.getElementsByClassName('game-card');
 let cardElementsArray = [...cardElements];
+//game-card for only easy images. Easy images are appended to this.
 let easyElements = document.getElementsByClassName('easy-card');
 let easyElementsArray = [...easyElements];
-
+//array for all images, also used when shuffling at difficulty level 'hard' because it involves all cards
 let imgElements = document.getElementsByClassName('game-card-img');
 let imgElementsArray = [...imgElements];
+//array for only easy-level images
 let easyCards = document.getElementsByClassName('easy');
 let easyArray = [...easyCards];
+//array for medium level images
 let mediumCards= document.getElementsByClassName("medium");
 let mediumArray = [...mediumCards];
 let mediumElements = document.getElementsByClassName('medium-card');
@@ -29,7 +32,12 @@ var easyRow=document.getElementById('row-easy');
 var hardButton= document.getElementById('hard-button');
 var hardRow=document.getElementById('row-hard');
 
-
+function reload(){
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "somefile.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+}
 
 
 //start game
@@ -50,17 +58,18 @@ function shuffle(array) {
 
 
 }
-
+//shuffle easy images
 function shuffleImages(){
 
     var shuffledImages = shuffle(easyArray);
     console.log(shuffledImages);
     for(i=0; i<shuffledImages.length; i++) {
 //add the shuffled images to each card
-        easyElements[i].appendChild(shuffledImages[i])};
-
-
+        easyElements[i].appendChild(shuffledImages[i]);
+        console.log(easyElements[i].appendChild(shuffledImages[i]));
+    }
 }
+//shuffle medium images
 function shuffleMediumImages(){
     var shuffledImages = shuffle(mediumElementsArray);
     console.log(shuffledImages);
@@ -69,6 +78,7 @@ function shuffleMediumImages(){
         mediumElements[i].appendChild(shuffledImages[i])};
 
 }
+//shuffle all three sets of images for maximum difficulty level
 function shuffleAllImages(){
     var shuffledImagesHard = shuffle(imgElementsArray);
     console.log(shuffledImagesHard);
@@ -114,6 +124,8 @@ function startGame() {
         cardElementsArray[i].addEventListener('click', countScore)
 
     }
+
+    console.log(cardElementsArray);
 }
 
 function displayCard() {
@@ -132,7 +144,7 @@ function displayCard() {
 
 
 
-
+    console.log(card1,card2);
 
 
 }
@@ -182,11 +194,13 @@ easyButton.addEventListener('click', changeToEasy);
 
 
 function changeToEasy(){
-    mediumRow.classList.add('hidden');
-    hardRow.classList.add('hidden');
-    hardRow.classList.remove('shuffle');
-    mediumRow.classList.remove('shuffle')
-    easyRow.classList.add('shuffle');
+
+    reload();
+    //mediumRow.classList.add('hidden');
+    //hardRow.classList.add('hidden');
+    //hardRow.classList.remove('shuffle');
+    //mediumRow.classList.remove('shuffle')
+    //easyRow.classList.add('shuffle');
 
 
 
