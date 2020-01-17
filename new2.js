@@ -196,8 +196,8 @@ easyButton.addEventListener('click', changeToEasy);
 function changeToEasy(){
 
     reload();
-    //mediumRow.classList.add('hidden');
-    //hardRow.classList.add('hidden');
+    mediumRow.classList.add('hidden');
+    hardRow.classList.add('hidden');
     //hardRow.classList.remove('shuffle');
     //mediumRow.classList.remove('shuffle')
     //easyRow.classList.add('shuffle');
