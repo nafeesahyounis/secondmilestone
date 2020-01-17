@@ -35,7 +35,7 @@ var hardRow=document.getElementById('row-hard');
 function reload(){
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "somefile.js";
+    script.src = "new2.js";
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 
