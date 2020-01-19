@@ -6,14 +6,20 @@
 </head>
 <main class="container-fluid">
     <div class="row game-menu-container">
-        <div class="col-lg-12 game-menu">
-            <h1>Game Menu</h1>
-            <p><a href="newindex.html" class="btn btn-dark">Play Game</a></p>
-            <p><button type="button" class="btn btn-secondary">How to Play</button>
+        <div class="col-lg-12 col-sm-12 col-md-12 col-12 game-menu">
+            <h1 id="game-menu-header">Game Menu</h1>
+            <p class="game-menu-buttons"><a href="newindex.html" class="btn btn-dark">Play Game</a></p>
+            <p class="game-menu-buttons"><button type="button" class="btn btn-secondary">How to Play</button>
             </p>
-            <p><button type="button" class="btn btn-secondary">Choose difficulty level</button>
+            <p class="game-menu-buttons"><button type="button" class="btn btn-secondary">Choose difficulty level</button>
             </p>
+            <div id="overlay">
+                <p id="overlay-text">Once Upon A Time</p>
+                <button id="overlay-button"> Go To Game Menu</button>
 
+            </div>
+        </div>
+    </div>
 </main>
 
 <script src="new2.js">

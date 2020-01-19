@@ -53,8 +53,15 @@ body{
 
 .game-menu{
     text-align:center;
+    font-size:300%;
 }
-
+#game-menu-header{
+    font-size:80px;
+    height:25vh;
+}
+.game-menu-buttons{
+    height:25vh;
+}
 .game-info{
     height:100vh;
     background-color:#837789;
@@ -109,9 +116,20 @@ body{
 }
 
 
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.9);
+    overflow-x:hidden;
+    z-index:5;
+}
 
-
-
+#overlay-text{
+    color:white;
+}
 
 
 .scale-in-left {
