@@ -25,6 +25,8 @@
 button{
     text-align:center;
 }
+/*to ensure that images don't overflow*/
+
 
 
 /*body {
@@ -33,6 +35,7 @@ button{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    #837789;
 }*/
 ol, ul {
     list-style: none;
@@ -42,13 +45,15 @@ em {
     font-style: italic;
 }
 
-body{
+
+.game-menu-and-board-container{
     background: url(background-waterfall.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     text-align:center;
+    overflow:hidden;
 }
 
 .game-menu{
@@ -65,13 +70,32 @@ body{
 }
 .game-info{
     height:100vh;
-    background-color:#837789;
+    background-color:rgba(127, 63, 191, 0.4)
 
 }
+
+.moves-made{
+    border:solid;
+    text-align:center;
+    background-color: #BF7F3F;
+}
+.level-choice{
+    margin-top:5vh;
+    border:solid;
+    text-align:center;
+    background-color: #BF7F3F;
+}
+
+.navigation-buttons{
+    margin-top:5vh;
+    border:solid;
+    text-align:center;
+    background-color: #BF7F3F;
+}
 .game-board {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+
+
+    margin-top:5vh;
     border-radius: 0.3em;
     box-shadow: 0 5px 5px #808080;
     background: url(background-waterfall.png) no-repeat center center fixed;
