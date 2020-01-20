@@ -61,6 +61,7 @@ body{
 }
 .game-menu-buttons{
     height:25vh;
+    font-size:100%;
 }
 .game-info{
     height:100vh;
