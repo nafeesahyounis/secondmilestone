@@ -7,7 +7,7 @@ Cat-Matched is an easy to use, intuitive card-matching memory game aimed at olde
 ___
 #### *Project Goals*
 
-The goal of Cat-Matched is to be a quick and relaxing break in an otherwise boring or stressful day. The target audience is older adults and young professionals.
+The goal of Cat-Matched is to be a quick and relaxing break in an otherwise boring or stressful day. The game should feel like an escape. The target audience is older adults and young professionals.
 
 **Player Goals**
 
