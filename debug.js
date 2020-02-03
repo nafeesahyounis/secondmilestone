@@ -1,3 +1,8 @@
+//first, create array for all images
+//second, shuffle images
+//create and append images in shuffled order
+
+//create images
 var allImages = [
     "island.png",
     "cat-reading.png",
@@ -9,6 +14,9 @@ var allImages = [
     "ship.png",
 
 ];
+let cardElements = document.getElementsByClassName('card');
+let cardElementsArray = [...cardElements];
+
 
 
 function createImages(){
@@ -17,18 +25,18 @@ function createImages(){
     // counter
     var i = 0;
 
-    // create object
+    // shuffle array
 
-
+    shuffle(allImages);
 
     // start preloading
-    for(i=0; i<=3; i++)
+    for(i=0; i<allImages.length; i++)
     {
         var imageObj = document.createElement('img');
         imageObj.style.width ="100px";
         imageObj.style.height ="100px";
         imageObj.src=allImages[i];
-        document.body.appendChild(imageObj);
+        cardElementsArray[i].appendChild(imageObj);
     }
 
     console.log(allImages[i]);
@@ -45,6 +53,27 @@ function createOneImage(){
     anotherImage.src = 'pirate.png';
     document.body.appendChild(anotherImage);
 }
+
+//shuffle Images
+
+function shuffle(array) {
+    let currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+
+    while (currentIndex !==0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+
+
+}
+
 
 window.onload = function () {
     setTimeout(function() {
