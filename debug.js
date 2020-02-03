@@ -41,6 +41,6 @@ function createOneImage(){
 
 window.onload = function () {
     setTimeout(function() {
-        createImages();
+        createOneImage();
     }, 1200);
 }
