@@ -1,67 +1,22 @@
-<!DOCTYPE html>
-   <html lang="en">
-   <head>
-   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-   <meta content="utf-8" http-equiv="encoding">
-     <link rel="stylesheet" href="style.css">
+<html>
+<body>
+
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+
+<button id="test-button">Click Me</button>
+</body>
+
+<script src="debug.js"></script>
 
 
-   </head>
-   <body>
-   <p>"Wassup"</p>
-    <canvas id="gameCanvas"></canvas>
-    <script>
-    var monster = {
-        //the monster's image
-        image: "monsterStates.png",
-        //THE MONSTERS STATES
-        NORMAL:0,
-        SCARED:1,
-        state:0,
-    }
 
-    //Set up the canvas and drawing surface
-    var canvas = document.querySelector("canvas");
-    var drawingSurface = canvas.getContext("2d");
-    //Load the monster's image
-    var monsterImage = new Image();
-    monsterImage.addEventListener("load", render, false);
-    monsterImage.src = monster.image;
-    //Change the monster's state by pressing and releasing a key
-    window.addEventListener("click", keydownHandler, false);
-    window.addEventListener("keyup", keyupHandler,false);
-
-    function keydownHandler(event){
-        //when a key is pressed, change monster's state to SCARED
-        monster.state = monster.SCARED;
-        render();
-    }
-
-    function keyupHandler(event){
-        monster.state = monster.NORMAL;
-        render();
-    }
-
-    function render(){
-        //go to current state
-        switch(monster.state)
-        {
-            case monster.NORMAL:
-            drawingSurface.drawImage(
-
-            monsterImage,
-             0, 0, 64, 64,
-            0, 0, 64, 64);
-        break;
-        case monster.SCARED:
-      drawingSurface.drawImage
-      (
-        monsterImage,
-        64, 0, 64, 64,
-        0, 0, 64, 64);
-
-        }
-    }
-    </script>
-   </body>
-   </html>
+    </html>
