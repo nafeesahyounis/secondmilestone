@@ -36,9 +36,11 @@ function changeLevel(){
     var selection = selection1.concat(selection2);
     console.log(selection);
     shuffle(selection);
+
+    createImages(selection);
 }
 
-function createImages(){
+function createImages(images){
     //create images
 
     // counter
@@ -46,19 +48,20 @@ function createImages(){
 
     // shuffle array
 
-    shuffle(allImages);
-
+    shuffle(images);
+    console.log(images);
+    console.log(images.length)
     // start preloading
-    for(i=0; i<allImages.length; i++)
+    for(i=0; i<images.length; i++)
     {
         var imageObj = document.createElement('img');
         imageObj.style.width ="100px";
         imageObj.style.height ="100px";
-        imageObj.src=allImages[i];
+        imageObj.src=images[i];
         cardElementsArray[i].appendChild(imageObj);
     }
 
-    console.log(allImages[i]);
+    console.log(images[i]);
 
 
 
@@ -96,7 +99,6 @@ function shuffle(array) {
 
 window.onload = function () {
     setTimeout(function() {
-        createImages();
         startGame();
     }, 1200);
 }
