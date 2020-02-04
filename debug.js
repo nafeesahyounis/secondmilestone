@@ -32,8 +32,9 @@ function startGame(){
 function changeLevel(){
 
     for(i=0; i<cardElementsArray.length; i++){
-    cardElementsArray.innerHTML = "";
+    cardElementsArray.innerHTML="";
     }
+    console.log(cardElementsArray);
     shuffle(allImages);
     var selection1=allImages.slice(0,4);
     var selection2=selection1.slice(0,4);
