@@ -1,6 +1,8 @@
 //first, create array for all images
 //second, shuffle images
 //create and append images in shuffled order
+//create an empty array. For easy level, 4 cards are selected from the original array and put into the new array. The array is then
+//duplicated and both arrays are combined and shuffled.
 
 //create images
 var allImages = [
@@ -14,10 +16,27 @@ var allImages = [
     "ship.png",
 
 ];
+
+var selection=[];
 let cardElements = document.getElementsByClassName('card');
 let cardElementsArray = [...cardElements];
+var button = document.getElementById('test-button');
 
+//add event listener to button
+function startGame(){
+    button.addEventListener('click',changeLevel);
+}
 
+//cut the array and put only 4 cards into the selection array, duplicate those cards into a new array, concat both arrays into
+//a new array - this new array will be used in the createImages function
+function changeLevel(){
+    shuffle(allImages);
+    var selection1=allImages.slice(0,4);
+    var selection2=selection1.slice(0,4);
+    var selection = selection1.concat(selection2);
+    console.log(selection);
+    shuffle(selection);
+}
 
 function createImages(){
     //create images
@@ -78,5 +97,6 @@ function shuffle(array) {
 window.onload = function () {
     setTimeout(function() {
         createImages();
+        startGame();
     }, 1200);
 }
