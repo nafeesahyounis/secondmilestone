@@ -30,6 +30,7 @@ function startGame(){
 //cut the array and put only 4 cards into the selection array, duplicate those cards into a new array, concat both arrays into
 //a new array - this new array will be used in the createImages function
 function changeLevel(){
+    cardElementsArray.innerHTML="";
     shuffle(allImages);
     var selection1=allImages.slice(0,4);
     var selection2=selection1.slice(0,4);
