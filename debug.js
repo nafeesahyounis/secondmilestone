@@ -32,7 +32,7 @@ function startGame(){
 function changeLevel(){
 
     for(i=0; i<cardElementsArray.length; i++){
-    cardElementsArray.innerHTML="";
+    cardElementsArray[i].innerHTML="";
     }
     console.log(cardElementsArray);
     shuffle(allImages);
