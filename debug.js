@@ -12,7 +12,7 @@ var allImages = [
     "sleeping-kitty.png",
     "little-cat.png",
     "cat.png",
-    "pirate.png",
+    "thinking-cat.png",
     "ship.png",
 
 ];
@@ -20,24 +20,33 @@ var allImages = [
 var selection=[];
 let cardElements = document.getElementsByClassName('card');
 let cardElementsArray = [...cardElements];
-var button = document.getElementById('test-button');
+var button = document.getElementById('easy-button');
+var mediumButton=document.getElementById('medium-button');
 
 //add event listener to button
 function startGame(){
-    button.addEventListener('click',changeLevel);
+    button.addEventListener('click',changeToEasy);
+    mediumButton.addEventListener('click',changeToMedium);
 }
 
+function changeToEasy(){
+    changeLevel(0,3)
+}
+
+function changeToMedium(){
+    changeLevel(0,4)
+}
 //cut the array and put only 4 cards into the selection array, duplicate those cards into a new array, concat both arrays into
 //a new array - this new array will be used in the createImages function
-function changeLevel(){
+function changeLevel(x,y){
 
     for(i=0; i<cardElementsArray.length; i++){
     cardElementsArray[i].innerHTML="";
     }
     console.log(cardElementsArray);
     shuffle(allImages);
-    var selection1=allImages.slice(0,4);
-    var selection2=selection1.slice(0,4);
+    var selection1=allImages.slice(x,y);
+    var selection2=selection1.slice(x,y);
     var selection = selection1.concat(selection2);
     console.log(selection);
     shuffle(selection);
@@ -64,6 +73,8 @@ function createImages(images){
         imageObj.style.height ="100px";
         imageObj.src=images[i];
         cardElementsArray[i].appendChild(imageObj);
+
+
     }
 
     console.log(images[i]);
@@ -72,14 +83,7 @@ function createImages(images){
 
 }
 
-function createOneImage(){
-    var myImage = new Image(100, 200);
-    myImage.src = 'cat.png';
-    document.body.appendChild(myImage);
-    var anotherImage = new Image(100, 200);
-    anotherImage.src = 'pirate.png';
-    document.body.appendChild(anotherImage);
-}
+
 
 //shuffle Images
 
