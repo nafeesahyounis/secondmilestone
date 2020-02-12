@@ -38,27 +38,33 @@ var totalGameMoves=document.getElementById('totalGameMoves');
 var restartButton = document.getElementById('restartButton');
 var easyButton= document.getElementById('easy-button');
 var mediumButton= document.getElementById('medium-button');
+//array for medium cards to be used when changing levels.
 var mediumRow=document.getElementsByClassName('row-medium');
+let mediumRowArray = [...mediumRow];
 var easyRow=document.getElementsByClassName('row-easy');
 
-//var hardButton= document.getElementById('hard-button');
+var hardButton= document.getElementById('hard-button');
 var hardRow=document.getElementsByClassName('row-hard');
+let hardRowArray = [...hardRow];
+
 
 //add event listeners to the difficulty buttons in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
 
 function changeToEasy(){
 
+    for (let i = 0; i < mediumRowArray.length; i++) {
+        mediumRowArray[i].classList.add('hidden');}
+    for (let i = 0; i < hardRowArray.length; i++) {
+        hardRowArray[i].classList.add('hidden');}
 
-    //mediumRow.classList.add('hidden');
-    //hardRow.classList.add('hidden');
-    changeLevel(0,4)
+
+
+         changeLevel(0,4)
 
 
 
- //   startGame();
- //   for (let i = 0; i < imgElementsArray.length; i++) {
- //       imgElementsArray[i].classList.remove('show-img');}
+
     if (score>=1){
         score=0;
         totalGameMoves.innerHTML=score;
@@ -69,6 +75,10 @@ mediumButton.addEventListener('click', changeToMedium);
 
 
 function changeToMedium(){
+    for (let i = 0; i < mediumRowArray.length; i++) {
+        mediumRowArray[i].classList.remove('hidden');}
+    for (let i = 0; i < hardRowArray.length; i++) {
+        hardRowArray[i].classList.add('hidden');}
     //mediumRow.classList.remove('hidden');
     //hardRow.classList.add('hidden');
     changeLevel(0,6);
@@ -78,6 +88,29 @@ function changeToMedium(){
         totalGameMoves.innerHTML=score;
     }
 }
+
+hardButton.addEventListener('click', changeToHard);
+
+function changeToHard(){
+
+    for (let i = 0; i < mediumRowArray.length; i++) {
+        mediumRowArray[i].classList.remove('hidden');}
+    for (let i = 0; i < hardRowArray.length; i++) {
+        hardRowArray[i].classList.remove('hidden');}
+
+
+
+    changeLevel(0,8)
+
+
+
+
+    if (score>=1){
+        score=0;
+        totalGameMoves.innerHTML=score;
+    }
+}
+
 //select and shuffle cards based on difficulty level
 function shuffle(array) {
     let currentIndex = array.length,
@@ -144,37 +177,7 @@ function createImages(images){
 
 }
 
-//create Images
-//shuffle easy images
-//function shuffleImages(){
 
-    //var shuffledImages = shuffle(easyArray);
-    //console.log(shuffledImages);
-   // for(i=0; i<shuffledImages.length; i++) {
-//add the shuffled images to each card
-   //     easyElements[i].appendChild(shuffledImages[i]);
-    //    console.log(easyElements[i].appendChild(shuffledImages[i]));
-   // }
-//}
-//shuffle medium images
-//function shuffleMediumImages(){
-//    var shuffledImages = shuffle(mediumElementsArray);
- //   console.log(shuffledImages);
- //   for(i=0; i<shuffledImages.length; i++) {
-//add the shuffled images to each card
- //       mediumElements[i].appendChild(shuffledImages[i])};
-
-//}
-//shuffle all three sets of images for maximum difficulty level
-//function shuffleAllImages(){
- //   var shuffledImagesHard = shuffle(imgElementsArray);
- //   console.log(shuffledImagesHard);
- //   for(i=0; i<shuffledImagesHard.length; i++) {
-//add the shuffled images to each card
-  //      cardElements[i].appendChild(shuffledImagesHard[i])};
-  //      debugger;
-
-//}
 //restart game when restart button is clicked
 
 
@@ -207,7 +210,7 @@ function createImages(images){
 function startGame() {
 
     for (let i = 0; i < cardElementsArray.length; i++) {
-//        cardElementsArray[i].addEventListener('click', displayCard)
+        cardElementsArray[i].addEventListener('click', displayCard)
         cardElementsArray[i].addEventListener('click', countScore)
 
     }
@@ -215,26 +218,28 @@ function startGame() {
     console.log(cardElementsArray);
 }
 
-//function displayCard() {
-//    if (counter==0){
-//        counter=1;
-//        this.children[0].classList.add('show-img');
-//        card1=this.children[0];
-//    }
-//   else if (counter==1){
-//        counter=2;
-//        this.children[0].classList.add('show-img');
-//        card2=this.children[0];
-//        checkForMatch();
-//        counter=0;
-//    }
+function displayCard() {
+    if (counter==0){
+        counter=1;
+        this.children[0].classList.remove('hidden');
+        this.children[0].classList.add('show-img');
+        card1=this.children[0];
+    }
+   else if (counter==1){
+        counter=2;
+        this.children[0].classList.remove('hidden');
+        this.children[0].classList.add('show-img');
+        card2=this.children[0];
+        checkForMatch();
+        counter=0;
+    }
 
 
 
-//    console.log(card1,card2);
+    console.log(card1,card2);
 
 
-//}
+}
 
 //counter goes up one every time you click a card
 
@@ -244,34 +249,38 @@ function countScore() {
 }
 
 
-//YES
-//function checkForMatch() {
 
-//       if (card1.src==card2.src){
-//           console.log("match");
-//           match();
-//       }
-//    else{
-//        console.log("mismatch");
-//        mismatched();
-//       }
-//}
+function checkForMatch() {
+
+       if (card1.src==card2.src){
+           console.log("match");
+           match();
+       }
+    else{
+        console.log("mismatch");
+        mismatched();
+       }
+}
 // make sure that when cards flip back over there is a 1 second delay so that player can see both cards. Also initialise 'unflip'
-//function mismatched(){
-//    setTimeout(unflipCards,1000);
-//}
+function mismatched(){
+    setTimeout(unflipCards,1000);
+}
 
 //if two cards have the same src element, remove Event Listener
-//function match(){
-//    card1.parentElement.removeEventListener('click',displayCard);
-//    card2.parentElement.removeEventListener('click',displayCard);
-//}
+function match(){
+    card1.parentElement.removeEventListener('click',displayCard);
+    card2.parentElement.removeEventListener('click',displayCard);
+}
 
 //un-flip cards that don't match
-//function unflipCards(){
-//    card1.classList.remove('show-img');
-//    card2.classList.remove('show-img');
-//}
+function unflipCards(){
+    card1.classList.remove('show-img');
+    card1.classList.add('hidden');
+
+    card2.classList.remove('show-img');
+    card2.classList.add('hidden');
+
+}
 
 
 //change difficulty selection

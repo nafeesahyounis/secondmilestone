@@ -10,8 +10,9 @@
 
 </head>
 <body>
+    <div class="container"><h1 class="title">Cat-Matched</h1></div>
     <div class="container">
-        <div class="row row-easy">
+        <div class="row">
                 <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
                 </div>
                 <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
@@ -22,7 +23,7 @@
                 </div>
 
             </div>
-        <div class="row row-easy">
+        <div class="row">
             <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
                 </div>
             <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
@@ -32,17 +33,17 @@
             <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
                 </div>
             </div>
-        <div class="row row-medium">
-            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
+        <div class="row">
+            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4 row-medium hidden">
                 </div>
-            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4 row-medium hidden">
                 </div>
-            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4 row-medium hidden">
                 </div>
-            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4 row-medium hidden">
                 </div>
             </div>
-        <div class="row row-medium">
+        <div class="row">
             <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
                 </div>
             <div class="game-card col-sm-6 col-md-4 col-lg-3 mt-4">
@@ -56,20 +57,21 @@
 
     <div class="row">
 
-        <div class="col-lg-12 col-sm-12 col-md-2 game-info">
+        <div class="col-lg-4 col-sm-12 col-md-2 game-info">
             <div class="moves-made">
 
                 <div><h2>Moves Made</h2>
                 <p>You completed the game using <span id="totalGameMoves"></span> moves</p></div>
             </div>
-            <div class="level-choice">
+        </div>
+            <div class="level-choice col-lg-4">
                 <h2>Choose Your Level: </h2>
                 <p class="modal-footer">
                     <button id="easy-button">Easy</button> <button id="medium-button">Medium</button> <button id="hard-button">Hard</button>
                 </p>
 
             </div>
-            <div class="navigation-buttons">
+            <div class="navigation-buttons col-lg-4">
                 <p class="restart-button-div">
                     <button class="restart-button brown-button" id="restartButton">Restart ↻</button>
                     <button class="restart-button brown-button">Back to Main Menu</button>
