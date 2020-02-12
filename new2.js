@@ -47,7 +47,7 @@ var hardButton= document.getElementById('hard-button');
 var hardRow=document.getElementsByClassName('row-hard');
 let hardRowArray = [...hardRow];
 
-
+var numberOfImages;
 //add event listeners to the difficulty buttons in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
 
@@ -171,19 +171,34 @@ function createImages(images){
 
     }
 
-    console.log(images[i]);
+    numberOfImages=images.length;
+
+    console.log(numberOfImages);
+
+
 
 
 
 }
 
 
-//restart game when restart button is clicked
+//restart game depending on the level when restart button is clicked
 
 
-    //restartButton.addEventListener('click',restartGame);
+restartButton.addEventListener('click',restartGame);
 
-//function restartGame(){
+function restartGame(){
+    if (numberOfImages===8){
+        changeToEasy();
+    }
+    if (numberOfImages===12){
+        changeToMedium();
+    }
+    if (numberOfImages===16){
+        changeToHard();
+    }
+
+}
 
     //for (let i = 0; i < imgElementsArray.length; i++) {
     //imgElementsArray[i].classList.remove('show-img');}
