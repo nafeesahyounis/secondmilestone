@@ -44,10 +44,22 @@ ol, ul {
 em {
     font-style: italic;
 }
+.title{
+    text-align:center;
+}
 
-
-.game-menu-and-board-container{
+.game-menu-container{
     background: url(background-waterfall.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align:center;
+    overflow:hidden;
+
+}
+.game-menu-and-board-container{
+    background: url(background-sky.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -65,12 +77,12 @@ em {
     height:25vh;
 }
 .game-menu-buttons{
-    height:25vh;
     font-size:100%;
 }
+
+/*main game page*/
 .game-info{
-    height:100vh;
-    background-color:rgba(127, 63, 191, 0.4)
+    background-color:rgba(127, 63, 191, 0.4);
 
 }
 
@@ -87,7 +99,6 @@ em {
 }
 
 .navigation-buttons{
-    margin-top:5vh;
     border:solid;
     text-align:center;
     background-color: #BF7F3F;
@@ -96,13 +107,16 @@ em {
 
 
     margin-top:5vh;
-    border-radius: 0.3em;
-    box-shadow: 0 5px 5px #808080;
+    /*border-radius: 0.3em;*/
+    /*box-shadow: 0 5px 5px #808080;*/
     background: url(background-waterfall.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width:100vw;
+    padding:0;
+
 }
 
 .game-grid-row {
@@ -111,13 +125,14 @@ em {
 }
 
 .game-card {
-    width: 6em;
+    width: 100px;
     height: 6em;
     background-color: transparent;
     border-radius: 0.3em;
-    margin: 0.8em;
+
     box-shadow: 2px 0 10px #212121;
     cursor: pointer;
+    padding:0px;
 }
 
 .game-card-img {
@@ -132,7 +147,7 @@ em {
     animation: animateShowImage 0.4s linear alternate;
 }
 
-.visibility {
+.visible{
     visibility:visible;
 }
 
@@ -206,6 +221,10 @@ em {
         opacity: 1;
     }
 }
+
+
+
+//
 
 
 
