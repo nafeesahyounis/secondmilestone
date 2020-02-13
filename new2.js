@@ -173,7 +173,6 @@ function createImages(images){
 
     numberOfImages=images.length;
 
-    console.log(numberOfImages);
 
 
 
@@ -234,6 +233,7 @@ function startGame() {
 }
 
 function displayCard() {
+    console.log(this);
     if (counter==0){
         counter=1;
         this.children[0].classList.remove('hidden');
