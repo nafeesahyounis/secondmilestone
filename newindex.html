@@ -13,12 +13,15 @@
     <script>
         $(document).ready(function(){
             $("#myModal").modal('show');
+            $('#myModal').off()
+            $("#myModal").modal({
+                backdrop: static,
+                keyboard: false
+            });
 
 
         });
-        $('#myModal').modal({
-            backdrop: 'static'
-        });
+
 
     </script>
 
