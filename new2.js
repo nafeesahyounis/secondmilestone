@@ -40,12 +40,16 @@ var easyButton= document.getElementById('easy-button');
 var modalEasyButton= document.getElementById('modal-easy-button');
 
 var mediumButton= document.getElementById('medium-button');
+var modalMediumButton= document.getElementById('modal-medium-button');
+
 //array for medium cards to be used when changing levels.
 var mediumRow=document.getElementsByClassName('row-medium');
 let mediumRowArray = [...mediumRow];
 var easyRow=document.getElementsByClassName('row-easy');
 
 var hardButton= document.getElementById('hard-button');
+var modalHardButton= document.getElementById('modal-hard-button');
+
 var hardRow=document.getElementsByClassName('row-hard');
 let hardRowArray = [...hardRow];
 
@@ -75,6 +79,8 @@ function changeToEasy(){
 }
 
 mediumButton.addEventListener('click', changeToMedium);
+modalMediumButton.addEventListener('click', changeToMedium);
+
 
 
 function changeToMedium(){
@@ -93,6 +99,8 @@ function changeToMedium(){
 }
 
 hardButton.addEventListener('click', changeToHard);
+modalHardButton.addEventListener('click', changeToHard);
+
 
 function changeToHard(){
 
