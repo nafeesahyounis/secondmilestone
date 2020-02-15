@@ -21,6 +21,11 @@
 
 
         });
+        $(function () {
+            $(".btnClosePopup").click(function () {
+                $("#myModal").modal("hide");
+            });
+        });
 
 
     </script>
@@ -35,7 +40,7 @@
                 <h3 class="modal-title">WELCOME TO CAT-MATCHED</h3>
                 <h4>How to Play</h4>
                 <h4>Choose Your Level</h4>
-                <h4><button>Easy</button><button>Medium</button><button>Hard</button></h4>
+                <h4><button id="modal-easy-button" class="btnClosePopup">Easy</button><button class="btnClosePopup">Medium</button><button class="btnClosePopup">Hard</button></h4>
             </div>
 
 

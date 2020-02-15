@@ -37,6 +37,8 @@ var score = 0;
 var totalGameMoves=document.getElementById('totalGameMoves');
 var restartButton = document.getElementById('restartButton');
 var easyButton= document.getElementById('easy-button');
+var modalEasyButton= document.getElementById('modal-easy-button');
+
 var mediumButton= document.getElementById('medium-button');
 //array for medium cards to be used when changing levels.
 var mediumRow=document.getElementsByClassName('row-medium');
@@ -50,6 +52,7 @@ let hardRowArray = [...hardRow];
 var numberOfImages;
 //add event listeners to the difficulty buttons in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
+modalEasyButton.addEventListener('click',changeToEasy);
 
 function changeToEasy(){
 
