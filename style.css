@@ -52,9 +52,7 @@ background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, F
 }
 
 .navigation-buttons{
-    border:solid;
     text-align:center;
-    background-color: #BF7F3F;
 }
 .gameboard {
 
