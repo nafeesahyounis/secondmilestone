@@ -1,30 +1,6 @@
 
 
-//newindex
 
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-  }
-button{
-    text-align:center;
-}
 /*to ensure that images don't overflow*/
 
 
@@ -37,36 +13,18 @@ button{
     background-size: cover;
     #837789;
 }*/
-ol, ul {
-    list-style: none;
+
+body{
+   background: #d9a7c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-em {
-    font-style: italic;
-}
 .title{
     text-align:center;
 }
 
-.game-menu-container{
-    background: url(background-waterfall.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align:center;
-    overflow:hidden;
-
-}
-.game-menu-and-board-container{
-    background: url(background-sky.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align:center;
-    overflow:hidden;
-}
 
 .game-menu{
     text-align:center;
@@ -82,20 +40,15 @@ em {
 
 /*main game page*/
 .game-info{
-    background-color:rgba(127, 63, 191, 0.4);
 
 }
 
 .moves-made{
-    border:solid;
     text-align:center;
-    background-color: #BF7F3F;
 }
 .level-choice{
     margin-top:5vh;
-    border:solid;
     text-align:center;
-    background-color: #BF7F3F;
 }
 
 .navigation-buttons{
@@ -103,7 +56,7 @@ em {
     text-align:center;
     background-color: #BF7F3F;
 }
-.game-board {
+.gameboard {
 
 
     margin-top:5vh;
@@ -119,27 +72,39 @@ em {
 
 }
 
+.game-board{
+      background: url(paws.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
 .game-grid-row {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.game-card {
-    width: 100px;
-    height: 6em;
-    background-color: transparent;
-    border-radius: 0.3em;
 
-    box-shadow: 2px 0 10px #212121;
-    cursor: pointer;
-    padding:0px;
-}
 
 .game-card-img {
     visibility: hidden;
     object-fit: cover;
     width: 4.5em;
     height: 4.5em;
+}
+
+
+
+.game-card {
+    overflow: hidden;
+    padding: 0;
+    border: black;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    height:100px;
+    width:100px;
 }
 
 .show-img {
