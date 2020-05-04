@@ -12,14 +12,14 @@ let cardElementsArray = [...cardElements];
 
 //this array contains all of the images
 var allImages = [
-    "island.png",
-    "cat-reading.png",
-    "cuty-cats.png",
-    "sleeping-kitty.png",
-    "little-cat.png",
-    "cat.png",
-    "pirate.png",
-    "ship.png",
+    "assets/images/island.png",
+    "assets/images/cat-reading.png",
+    "assets/images/cuty-cats.png",
+    "assets/images/sleeping-kitty.png",
+    "assets/images/little-cat.png",
+    "assets/images/cat.png",
+    "assets/images/pirate.png",
+    "assets/images/ship.png",
 
 ];
 
