@@ -1,0 +1,98 @@
+body{
+  /* background: #d9a7c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+
+.row{
+    max-width:100%;
+    overflow:hidden;
+    
+}
+
+/* overflow on main game page fixed by setting it to hidden for the bootstrap container*/
+.container{
+    overflow:hidden;
+    max-width:100%;
+}
+
+
+
+/*main game page*/
+
+.title{
+    text-align:center;
+    font-family: 'Lora', serif;
+    overflow:hidden;
+
+}
+
+
+.moves-made{
+    text-align:center;
+    overflow:hidden;
+}
+.level-choice{
+    margin-top:5vh;
+    text-align:center;
+    overflow:hidden;
+}
+
+.navigation-buttons{
+    text-align:center;
+}
+
+
+.game-board{
+      background: url(paws.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom:20px;
+
+        max-width:100%;
+        justify-content:center;
+        overflow:hidden;
+
+
+
+}
+
+
+
+
+
+.game-card-img {
+    visibility: hidden;
+    object-fit: cover;
+    width: 4.5em;
+    height: 4.5em;
+}
+
+
+
+.game-card {
+    overflow: hidden;
+    padding: 0;
+    border: black;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    height:100px;
+    width:100px;
+}
+
+.show-img {
+    visibility: visible;
+    animation: animateShowImage 0.4s linear alternate;
+}
+
+.visible{
+    visibility:visible;
+}
+
+.hidden{
+    visibility:hidden;
+}
+
+
