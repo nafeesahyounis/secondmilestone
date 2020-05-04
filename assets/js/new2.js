@@ -156,6 +156,7 @@ function changeLevel(x,y){
     shuffle(selection);
 
     createImages(selection);
+    
 }
 
 function createImages(images){
@@ -167,8 +168,7 @@ function createImages(images){
     // shuffle array
 
     shuffle(images);
-    console.log(images);
-    console.log(images.length)
+    
     // start preloading
     for(i=0; i<images.length; i++)
     {
@@ -240,7 +240,6 @@ function startGame() {
 
     }
 
-    console.log(cardElementsArray);
 }
 
 function displayCard() {
