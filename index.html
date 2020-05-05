@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
 
     <style>
+
+    body{
+        background:none;
+    }
         .game-board{
             height:80vh;
             width:80vw;
@@ -23,7 +27,7 @@
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
       main{
-          background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-background11.jpg);
+          background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-try2.jpg);
       background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -35,16 +39,42 @@
           width:600px;
       }
 
+      .game-card {
+           height:100px;
+    width:100px;
+      }
+      .game-play{
+    height:100vh;
+    width:100vw;
+    background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-try2.jpg);
+      background-position: center;
+  background-repeat: no-repeat;
+  position: relative; 
+
+}
+
+.game-information{
+    background: #74ebd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
      
 }
 
 main{
-    background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-try2.jpg);
-      background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+    background:none;
         
 }
+
+.game-board{
+    width:100vw;
+    height:100vh;
+    
+}
+
+
 
 
         /*for phones */
@@ -55,6 +85,10 @@ main{
       .game-board{
           height:100vh;
           width:100vw;
+      }
+      .game-card{
+          height:70px;
+          width:70px;
       }
 }
 
@@ -90,6 +124,7 @@ main{
     -moz-box-shadow: .2em .2em .5em #333;
     -webkit-box-shadow: .2em .2em .5em #333;
     box-shadow: .2em .2em .5em #333;
+    
         }
     </style>
 
@@ -137,7 +172,31 @@ main{
 </div>
 
 <div class="container"><h1 class="title">Cat-Matched</h1></div>
-    <div class="game-board container">
+    <div class="game-board container-fluid">
+        
+        <div class="row">
+        <div class="col-12 col-lg-4 col-sm-12 col-md-12 game-information">
+        <div class="moves-made">
+
+                <div><h2>Moves Made</h2>
+                <p>You completed the game using <span id="totalGameMoves"></span> moves</p></div>
+            </div>
+            <div class="level-choice">
+                <h2>Choose Your Level: </h2>
+                <p class="modal-footer">
+                    <button id="easy-button">Easy</button> <button id="medium-button">Medium</button> <button id="hard-button">Hard</button>
+                </p>
+
+            </div>
+            <div class="navigation-buttons col-lg-4">
+                <p class="restart-button-div">
+                    <button class="restart-button brown-button" id="restartButton">Restart ↻</button>
+
+                </p>
+            </div> 
+        </div>
+        
+        <div class="col-12 col-sm-12 col-lg-8 col-md-12 game-play">
         <div class="row">
         <div class="col-4 col-sm-4 col-md-3 col-lg-3 card-container">
                 <div class="game-card">
@@ -206,31 +265,7 @@ main{
                 </div>
         </div>
         </div>
-<div class="container">
-    <div class="row">
-
-        <div class="col-lg-4 col-sm-12 col-md-2 game-info">
-            <div class="moves-made">
-
-                <div><h2>Moves Made</h2>
-                <p>You completed the game using <span id="totalGameMoves"></span> moves</p></div>
-            </div>
         </div>
-            <div class="level-choice col-lg-4">
-                <h2>Choose Your Level: </h2>
-                <p class="modal-footer">
-                    <button id="easy-button">Easy</button> <button id="medium-button">Medium</button> <button id="hard-button">Hard</button>
-                </p>
-
-            </div>
-            <div class="navigation-buttons col-lg-4">
-                <p class="restart-button-div">
-                    <button class="restart-button brown-button" id="restartButton">Restart ↻</button>
-
-                </p>
-            </div> 
-
-        </div> 
         </div>
 
 
