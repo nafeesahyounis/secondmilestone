@@ -54,7 +54,8 @@ var hardRow=document.getElementsByClassName('row-hard');
 let hardRowArray = [...hardRow];
 
 var numberOfImages;
-//add event listeners to the difficulty buttons in order to ascertain how many cards will appear and be shuffled
+
+//add event listeners to the difficulty buttons both in the game and modal in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
 modalEasyButton.addEventListener('click',changeToEasy);
 
@@ -76,6 +77,7 @@ function changeToEasy(){
         score=0;
         totalGameMoves.innerHTML=score;
     }
+    console.log(selection.length)
 }
 
 mediumButton.addEventListener('click', changeToMedium);
@@ -173,8 +175,8 @@ function createImages(images){
     for(i=0; i<images.length; i++)
     {
         var imageObj = document.createElement('img');
-        imageObj.style.width ="100px";
-        imageObj.style.height ="100px";
+        imageObj.style.width ="100%";
+        imageObj.style.height ="100%";
         imageObj.src=images[i];
         cardElementsArray[i].appendChild(imageObj);
         imageObj.classList.add('hidden');
