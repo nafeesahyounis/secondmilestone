@@ -31,6 +31,7 @@ background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, F
 .moves-made{
     text-align:center;
     overflow:hidden;
+    margin-top:5vh;
 }
 .level-choice{
     text-align:center;
