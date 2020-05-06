@@ -11,16 +11,25 @@
 
     <style>
 
+    .container-fluid{
+    max-width:100%;
+      overflow: scroll;
+
+}
+
+
     body{
 background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg) no-repeat center center fixed;
       -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;    }
+    background-size: cover;  
+      background-attachment: fixed;
+  }
         .game-board{
-            height:80vh;
             width:80vw;
             background:none;
+        
         }
 
         /*for desktop */
@@ -76,7 +85,6 @@ main{
 
 .game-board{
     width:100vw;
-    height:100vh;
     
     
 }
@@ -89,24 +97,16 @@ main{
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-      .game-board{
-          
-          
-           
-      }
+      
       .game-card{
           height:70px;
           width:70px;
       }
-      main{
-            background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-        }
+
+      
+      
     .game-board{
-                    padding-left:20%;
+                    padding-left:15%;
 
     }
     .level-choice{
