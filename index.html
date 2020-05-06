@@ -20,7 +20,6 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
         .game-board{
             height:80vh;
             width:80vw;
-            padding:2%;
             background:none;
         }
 
@@ -42,7 +41,6 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
 
       .game-board{
           height:100vh;
-          width:600px;
          /* background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg);
       background-position: center;
   background-repeat: no-repeat;
@@ -50,12 +48,14 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
       }
 
       .game-card {
-           height:100px;
+           height:130px;
     width:100px;
       }
       .game-play{
     height:100vh;
     width:100vw;
+    padding-left:5%;
+    padding-top:10%;
     
 
 }
@@ -105,6 +105,16 @@ main{
     -o-background-size: cover;
     background-size: cover;
         }
+    .game-board{
+                    padding-left:20%;
+
+    }
+    .level-choice{
+        font-size:20px;
+    }
+    .moves-made{
+        font-size:20px;
+    }
 }
 
 /*for tablets */
@@ -119,6 +129,11 @@ main{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+        }
+
+        .game-play{
+                        padding-left:20%;
+
         }
 
 }
@@ -186,29 +201,30 @@ main{
     </div>
 </div>
 
-<div class="container"><h1 class="title">Cat-Matched</h1></div>
+<div class="container">                    
+<h1 class="title">Cat-Matched</h1></div>
     <div class="game-board container-fluid">
         
         <div class="row">
         <div class="col-12 col-lg-4 col-sm-12 col-md-12 col-xs-12 game-information">
         <div class="moves-made">
 
-                <div><h2>Moves Made</h2>
+                <div><p>Moves Made</p>
                 <p>You completed the game using <span id="totalGameMoves"></span> moves</p></div>
             </div>
             <div class="level-choice">
-                <h2>Choose Your Level: </h2>
+                <p>Choose Your Level: </p>
                 <p class="modal-footer">
-                    <button id="easy-button">Easy</button> <button id="medium-button">Medium</button> <button id="hard-button">Hard</button>
+                <button id="easy-button">Easy</button> <button id="medium-button">Medium</button> <button id="hard-button">Hard</button>
                 </p>
+                            </div> 
 
-            </div>
-            <div class="navigation-buttons col-lg-4">
+                <div class="navigation-buttons col-lg-4">
                 <p class="restart-button-div">
                     <button class="restart-button brown-button" id="restartButton">Restart ↻</button>
 
                 </p>
-            </div> 
+            </div>
         </div>
         
         <div class="col-12 col-sm-12 col-lg-8 col-md-12 game-play">
