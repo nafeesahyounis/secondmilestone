@@ -33,7 +33,6 @@ background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, F
     overflow:hidden;
 }
 .level-choice{
-    margin-top:5vh;
     text-align:center;
     overflow:hidden;
 }
