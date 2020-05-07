@@ -54,6 +54,7 @@ var hardRow=document.getElementsByClassName('row-hard');
 let hardRowArray = [...hardRow];
 
 var numberOfImages;
+var numberOfMatches = 0;
 
 //add event listeners to the difficulty buttons both in the game and modal in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
@@ -212,26 +213,7 @@ function restartGame(){
 
 }
 
-    //for (let i = 0; i < imgElementsArray.length; i++) {
-    //imgElementsArray[i].classList.remove('show-img');}
-    //if (score>=1){
-    //    score=0;
-    //    totalGameMoves.innerHTML=score;
-   // }
-   // startGame();
-    //if(mediumRow.classList.contains("hidden")){
-     //   shuffleImages();
-    //    shuffleAllImages();
-    //}
-   // if(hardRow.classList.contains("shuffle")){
-    //   shuffleAllImages();
-    //   hardRow.classList.remove('shuffle');
-    //}
-    //if(easyRow.classList.contains("shuffle")) {
-   //     shuffleImages();
-  //  }
-
-//}
+   
 
 //display cards when game starts and initiate move counter
 function startGame() {
@@ -250,7 +232,10 @@ function flipEvent(){
     console.log(this)
             this.children[0].classList.add('animated', 'flipInY');
 
+
 }
+
+
 
 
 
@@ -290,13 +275,25 @@ function countScore() {
 function checkForMatch() {
 
        if (card1.src==card2.src){
-           console.log("match");
+           numberOfMatches = numberOfMatches+1
+            console.log(numberOfMatches)
            match();
        }
     else{
         console.log("mismatch");
         mismatched();
        }
+       youHaveWon();
+}
+
+//functionality added to announce you've won
+
+function youHaveWon(){
+    if ((numberOfImages/2) === numberOfMatches){
+        console.log(numberOfImages/2)
+        console.log(numberOfMatches)
+        console.log("You have won!")
+    }
 }
 // make sure that when cards flip back over there is a 1 second delay so that player can see both cards. Also initialise 'unflip'
 function mismatched(){
@@ -305,6 +302,7 @@ function mismatched(){
 
 //if two cards have the same src element, remove Event Listener
 function match(){
+    
     card1.parentElement.removeEventListener('click',displayCard);
     card2.parentElement.removeEventListener('click',displayCard);
 }
