@@ -239,10 +239,20 @@ function startGame() {
     for (let i = 0; i < cardElementsArray.length; i++) {
         cardElementsArray[i].addEventListener('click', displayCard)
         cardElementsArray[i].addEventListener('click', countScore)
+        cardElementsArray[i].addEventListener('click', flipEvent)
+
 
     }
 
 }
+
+function flipEvent(){
+    console.log(this)
+            this.children[0].classList.add('animated', 'flipInY');
+
+}
+
+
 
 function displayCard() {
     console.log(this);
