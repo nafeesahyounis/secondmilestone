@@ -47,12 +47,20 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
         }
     .title {
         font-size:72px;
+        border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
     }
         
 
       .game-board{
           height:100vh;
-              padding-top:10%;
+              padding-top:5%;
 
          /* background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg);
       background-position: center;
@@ -184,6 +192,10 @@ main{
     background-size: cover;
         }
 
+        .game-board{
+            padding-top:5%;
+        }
+
         .game-play{
                         padding-left:20%;
 
@@ -199,6 +211,20 @@ background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-2
 background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 text-align:center;
     font-family: 'Lora', serif;
+}
+
+.instructions-container {
+    background: #22c1c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.modal-title {
+    background: #22c1c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
         
 
@@ -236,6 +262,16 @@ border: 1px solid #666;
 
 
 }
+
+.title {
+        border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
 
 .level-choice{
     text-align:center;
@@ -291,9 +327,17 @@ border: 1px solid #666;
 
                 <h3 class="modal-title">WELCOME TO CAT-MATCHED</h3>
                 </div>
-                            <div class="col-12">
+                            <div class="col-12 instructions-container">
 
                 <h4>How to Play</h4>
+                <p> 1) Click on the cards and they will flip. Flip the cards to find matching pairs. </p>
+                <p> 2) When you have matched all the cards, you win the game. </p>
+                <p> 3) The 'Moves Made' section tracks how many moves it took you to win. </p>
+                <p> 4) Keep an eye on 'Moves Made' and if you want a challenge, try to beat your previous score! </p>
+        
+                <p> 5) If you want more challenge, choose 'Medium' or 'Hard' and you will have more cards to match! </p>
+                <p> 6) Made a mistake and want to try again? The 'restart' button will restart your game at the level you were on. </p>
+                <p> 7) Most importantly, HAVE FUN! </p> 
                             </div>
                             <div class="col-12">
                 <h4>Choose Your Level</h4>
@@ -309,20 +353,20 @@ border: 1px solid #666;
 </div>
 
 <div class="container">                    
-<h1 class="title">Cat-Matched</h1></div>
+<h1 class="title modal-title">Cat-Matched</h1></div>
     <div class="game-board container-fluid">
         
         <div class="row">
         <div class="col-12 col-lg-4 col-sm-12 col-md-12 col-xs-12 game-information">
         <div class="level-choice">
-                <p>Choose Your Level: </p>
+                <p class="modal-title">Choose Your Level: </p>
                 <p class="modal-footer">
-                <button id="easy-button" class="btn btn-info">Easy</button> <button id="medium-button" class="btn btn-primary">Medium</button> <button id="hard-button" class="btn btn-warning">Hard</button>
+                <p><button id="easy-button" class="btn btn-info">Easy</button></p><p> <button id="medium-button" class="btn btn-primary">Medium</button> <button id="hard-button" class="btn btn-warning">Hard</button></p>
                 </p>
                             </div> 
         <div class="moves-made">
 
-                <p>Moves Made</p>
+                <p class="modal-title">Moves Made</p>
                  <span id="totalGameMoves"></span> moves</p>
             </div>
             
