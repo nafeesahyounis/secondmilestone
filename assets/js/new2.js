@@ -36,6 +36,7 @@ var card2;
 var score = 0;
 var totalGameMoves=document.getElementById('totalGameMoves');
 var restartButton = document.getElementById('restartButton');
+var playAgainButton = document.getElementById('playAgain');
 var easyButton= document.getElementById('easy-button');
 var modalEasyButton= document.getElementById('modal-easy-button');
 
@@ -292,7 +293,8 @@ function youHaveWon(){
     if ((numberOfImages/2) === numberOfMatches){
         console.log(numberOfImages/2)
         console.log(numberOfMatches)
-        console.log("You have won!")
+        $('#exampleModal').modal('show')
+
     }
 }
 // make sure that when cards flip back over there is a 1 second delay so that player can see both cards. Also initialise 'unflip'
