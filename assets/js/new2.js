@@ -189,7 +189,7 @@ function createImages(images){
     numberOfImages=images.length;
 
 
-
+startGame();
 
 
 
@@ -200,6 +200,7 @@ function createImages(images){
 
 
 restartButton.addEventListener('click',restartGame);
+playAgainButton.addEventListener('click',restartGame);
 
 function restartGame(){
     if (numberOfImages===8){
@@ -294,6 +295,9 @@ function youHaveWon(){
         console.log(numberOfImages/2)
         console.log(numberOfMatches)
         $('#exampleModal').modal('show')
+        //reset counter for next game play
+        numberOfImages = 0;
+        numberOfMatches = 0;
 
     }
 }
