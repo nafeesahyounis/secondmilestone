@@ -295,8 +295,7 @@ function youHaveWon(){
         console.log(numberOfImages/2)
         console.log(numberOfMatches)
         $('#exampleModal').modal('show')
-        //reset counter for next game play
-        numberOfImages = 0;
+    //reset counter for next game play
         numberOfMatches = 0;
 
     }
