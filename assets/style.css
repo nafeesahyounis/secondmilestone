@@ -1,14 +1,238 @@
-body{
-  /* background: #d9a7c7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+
+
+/*for all screens */
+
+/*style modal */
+
+.modal-content{
+    background: #44A08D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+text-align:center;
+    font-family: 'Lora', serif;
 }
 
+.instructions-container {
+    background: #22c1c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
+
+}
+
+.modal-title {
+    background: #22c1c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
+
+}
+
+
+/*background image for body on all screens */
+body{
+background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+      background-attachment: fixed;
+  }
+/* initially when overflow was set to hidden, it wasn't possible to scroll down and see the rest of the game board, so it was changed to scroll in the container and this alongside the 100% width allows scrolling down but not sideways*/
+  .container-fluid{
+    max-width:100%;
+      overflow: scroll;
+
+}
+
+  /*rows made max width 100% to prevent overflow */
 .row{
     max-width:100%;
     overflow:hidden;
     
 }
+
+.game-card{
+            display: inline-block;
+            border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+    padding: .25em;
+    margin: 0 .5em .5em 0;
+    position: relative;
+    background-color: #fff;
+    -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    overflow: hidden;
+    padding: 0;
+    height:100px;
+    width:100px;
+    
+        }
+
+
+.moves-made{
+    text-align:center;
+    font-family: 'Lora', serif;
+    font-size:30px;
+    background: #44A08D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
+
+
+}
+
+.level-choice{
+    text-align:center;
+    font-family: 'Lora', serif;
+    font-size:30px;
+    border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
+    background: #44A08D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: 1px solid #666;
+
+}
+
+
+/*for desktop*/
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+     
+        
+    .title {
+        font-size:72px;
+        border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
+    }
+        
+
+      .game-board{
+          height:100vh;
+              padding-top:5%;}
+
+
+      .game-card {
+           height:130px;
+    width:100px;
+      }
+      .game-play{
+          height:100vh;
+    width:100vw;
+      }
+
+
+
+
+
+     
+}
+
+
+/*for phones */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+      .game-card{
+          height:50px;
+          width:50px;
+      }
+
+      .game-play{
+          overflow:scroll;
+      }
+
+      button {
+          font-size:12px;
+      }
+      
+    .game-board{
+                    padding-left:15%;
+                    overflow:scroll;
+
+    }
+    .level-choice{
+        font-size:18px;
+    }
+    .moves-made{
+        font-size:18px;
+        
+    }
+}
+
+/*for tablet */
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      main{
+            background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+        }
+
+        .game-board{
+            padding-top:5%;
+        }
+
+        .game-play{
+                        padding-left:20%;
+
+        }
+
+        .game-card{
+            height:100px;
+    width:100px;
+        }
+
+}
+
 
 /* overflow on main game page fixed by setting it to hidden for the bootstrap container*/
 .container{
@@ -36,47 +260,20 @@ background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, F
 }
 
 
-.moves-made{
-    text-align:center;
-    overflow:hidden;
-    margin-top:5vh;
-}
-.level-choice{
-    text-align:center;
-    overflow:hidden;
-}
+
 
 .navigation-buttons{
     text-align:center;
 }
 
 
-.game-board{
-      background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/paws.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-bottom:20px;
-
-        max-width:100%;
-        justify-content:center;
-        overflow:hidden;
-
-
-
-}
 
 
 
 
 
-.game-card-img {
-    visibility: hidden;
-    object-fit: cover;
-    width: 4.5em;
-    height: 4.5em;
-}
+
+
 
 
 
