@@ -13,10 +13,7 @@ text-align:center;
 }
 
 .instructions-container {
-    background: #22c1c3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-border: 1px solid #666;
+    
     border-radius: .3em;
     -moz-border-radius: .3em;
     -webkit-border-radius: .3em;
@@ -25,13 +22,15 @@ border: 1px solid #666;
     -webkit-box-shadow: .2em .2em .5em #333;
     box-shadow: .2em .2em .5em #333;
 
-}
+background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-for-desktop.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+      background-attachment: fixed;  }
 
 .modal-title {
-    background: #22c1c3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-border: 1px solid #666;
+background-color:#98C0C5;
     border-radius: .3em;
     -moz-border-radius: .3em;
     -webkit-border-radius: .3em;
@@ -45,12 +44,7 @@ border: 1px solid #666;
 
 /*background image for body on all screens */
 body{
-background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-      background-attachment: fixed;
+    background-color:#a1897f;
   }
 /* initially when overflow was set to hidden, it wasn't possible to scroll down and see the rest of the game board, so it was changed to scroll in the container and this alongside the 100% width allows scrolling down but not sideways*/
   .container-fluid{
@@ -66,6 +60,8 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
     
 }
 
+
+
 .game-card{
             display: inline-block;
             border: 1px solid #666;
@@ -75,7 +71,6 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
     -khtml-border-radius: .3em;
     padding: .25em;
     position: relative;
-    background-color: #fff;
     -moz-box-shadow: .2em .2em .5em #333;
     -webkit-box-shadow: .2em .2em .5em #333;
     overflow: hidden;
@@ -83,8 +78,12 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
     height:130px;
     width:100px;
       margin: auto;
-
-    
+background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-for-desktop.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+      background-attachment: fixed;    
         }
 
 
@@ -92,9 +91,7 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
     text-align:center;
     font-family: 'Lora', serif;
     font-size:30px;
-    background: #44A08D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background-color:#4B726D;
 border: 1px solid #666;
     border-radius: .3em;
     -moz-border-radius: .3em;
@@ -119,9 +116,8 @@ border: 1px solid #666;
      -moz-box-shadow: .2em .2em .5em #333;
     -webkit-box-shadow: .2em .2em .5em #333;
     box-shadow: .2em .2em .5em #333;
-    background: #44A08D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     background-color:#4B726D;
+
 border: 1px solid #666;
 
 }
@@ -186,6 +182,7 @@ border: 1px solid #666;
       .game-play{
           overflow:scroll;
           margin-left:10%;
+          
       }
 
       button {
