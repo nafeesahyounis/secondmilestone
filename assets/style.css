@@ -12,26 +12,8 @@ text-align:center;
     font-family: 'Lora', serif;
 }
 
-.instructions-container {
-    
-    border-radius: .3em;
-    -moz-border-radius: .3em;
-    -webkit-border-radius: .3em;
-    -khtml-border-radius: .3em;
-     -moz-box-shadow: .2em .2em .5em #333;
-    -webkit-box-shadow: .2em .2em .5em #333;
-    box-shadow: .2em .2em .5em #333;
-
-background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-for-desktop.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-      background-attachment: fixed;  }
-
 .modal-title {
-background-color:#98C0C5;
-    border-radius: .3em;
+background-image: linear-gradient(to right top, #4b726d, #5d817c, #70918c, #83a19d, #96b1ad);    border-radius: .3em;
     -moz-border-radius: .3em;
     -webkit-border-radius: .3em;
     -khtml-border-radius: .3em;
@@ -41,16 +23,43 @@ background-color:#98C0C5;
 
 }
 
+.instructions-container {
+    
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;}
+
+
+
 
 /*background image for body on all screens */
+
 body{
-    background-color:#a1897f;
+    background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cats-in-rain.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+      background-attachment: fixed;
+        
+
   }
+
 /* initially when overflow was set to hidden, it wasn't possible to scroll down and see the rest of the game board, so it was changed to scroll in the container and this alongside the 100% width allows scrolling down but not sideways*/
   .container-fluid{
     max-width:100%;
       overflow: scroll;
 
+}
+
+/* overflow on main game page fixed by setting it to hidden for the bootstrap container*/
+.container{
+    overflow:hidden;
+    max-width:100%;
 }
 
   /*rows made max width 100% to prevent overflow */
@@ -60,8 +69,23 @@ body{
     
 }
 
+.title {
+    border: 1px solid #666;
+    border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -khtml-border-radius: .3em;
+     -moz-box-shadow: .2em .2em .5em #333;
+    -webkit-box-shadow: .2em .2em .5em #333;
+    box-shadow: .2em .2em .5em #333;
+    text-align:center;
+    font-family: 'Lora', serif;
+    overflow:hidden;
+    
 
+}
 
+/*game-card size for bigger screen sizes. The rest of the styling stays the same for all screens. */
 .game-card{
             display: inline-block;
             border: 1px solid #666;
@@ -78,21 +102,16 @@ body{
     height:130px;
     width:100px;
       margin: auto;
-background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/cat-for-desktop.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-      background-attachment: fixed;    
+      background-image: linear-gradient(to right top, #4b726d, #49717c, #586d83, #96B1AD, #96B1AD);
+
         }
 
-
+/* container for section where moves are made */
 .moves-made{
     text-align:center;
     font-family: 'Lora', serif;
     font-size:30px;
- background-color:#4B726D;
-border: 1px solid #666;
+background-image: linear-gradient(to right top, #606b83, #667d90, #718f9b, #81a0a4, #96b1ad);border: 1px solid #666;
     border-radius: .3em;
     -moz-border-radius: .3em;
     -webkit-border-radius: .3em;
@@ -104,6 +123,7 @@ border: 1px solid #666;
 
 }
 
+/*container for choosing level */
 .level-choice{
     text-align:center;
     font-family: 'Lora', serif;
@@ -116,7 +136,7 @@ border: 1px solid #666;
      -moz-box-shadow: .2em .2em .5em #333;
     -webkit-box-shadow: .2em .2em .5em #333;
     box-shadow: .2em .2em .5em #333;
-     background-color:#4B726D;
+     background-image: linear-gradient(to right top, #606b83, #667d90, #718f9b, #81a0a4, #96b1ad);
 
 border: 1px solid #666;
 
@@ -131,23 +151,15 @@ border: 1px solid #666;
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
      
-        
+       /* size of title is largest on big screen size */ 
     .title {
         font-size:72px;
-        border: 1px solid #666;
-    border-radius: .3em;
-    -moz-border-radius: .3em;
-    -webkit-border-radius: .3em;
-    -khtml-border-radius: .3em;
-     -moz-box-shadow: .2em .2em .5em #333;
-    -webkit-box-shadow: .2em .2em .5em #333;
-    box-shadow: .2em .2em .5em #333;
     }
         
 
       .game-board{
           height:100vh;
-              padding-top:5%;}
+            padding-top:5%;}
 
 
       .game-card {
@@ -179,21 +191,28 @@ border: 1px solid #666;
           width:50px;
       }
 
+/* on phone game board does not fit on one screen, so overflow is set to scroll so that player can scroll down to see game board. Horizontal overflow fixed in earlier css */
+ /* margin added to center game-play board */     
       .game-play{
           overflow:scroll;
           margin-left:10%;
           
       }
 
+/*buttons resized so that they occupy less space on smaller screen size and dominate page less */
       button {
           font-size:12px;
       }
+
+/*see .game-play */
       
     .game-board{
                     padding-left:15%;
                     overflow:scroll;
 
     }
+
+/* see button */
     .level-choice{
         font-size:18px;
     }
@@ -201,9 +220,7 @@ border: 1px solid #666;
         font-size:18px;
         
     }
-    .final-card{
-        margin-left:155%;
-    }
+    
 }
 
 /*for tablet */
@@ -212,13 +229,7 @@ border: 1px solid #666;
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-      main{
-            background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/vintage-cat.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-        }
+    
 
         .game-board{
             padding-top:5%;
@@ -229,65 +240,11 @@ border: 1px solid #666;
 
         }
 
-        .game-card{
-            height:100px;
-    width:100px;
-        }
+     
 
 }
 
-
-/* overflow on main game page fixed by setting it to hidden for the bootstrap container*/
-.container{
-    overflow:hidden;
-    max-width:100%;
-}
-
-
-
-/*main game page*/
-
-.title{
-    text-align:center;
-    font-family: 'Lora', serif;
-    overflow:hidden;
-    border: 1px solid #666;
-    border-radius: .3em;
-    -moz-border-radius: .3em;
-    -webkit-border-radius: .3em;
-    -khtml-border-radius: .3em;
-     -moz-box-shadow: .2em .2em .5em #333;
-    -webkit-box-shadow: .2em .2em .5em #333;
-    box-shadow: .2em .2em .5em #333;
-
-}
-
-
-
-
-.navigation-buttons{
-    text-align:center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*.game-card {
-    overflow: hidden;
-    padding: 0;
-    border: black;
-    border-radius: .28571429rem;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-  
-} */
+/* css classes accessed by javascript to adjust visibility of images on click */
 
 .show-img {
     visibility: visible;
