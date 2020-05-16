@@ -74,15 +74,16 @@ background: url(https://nafeesahyounis.github.io/secondmilestone/assets/images/v
     -webkit-border-radius: .3em;
     -khtml-border-radius: .3em;
     padding: .25em;
-    margin: 0 .5em .5em 0;
     position: relative;
     background-color: #fff;
     -moz-box-shadow: .2em .2em .5em #333;
     -webkit-box-shadow: .2em .2em .5em #333;
     overflow: hidden;
     padding: 0;
-    height:100px;
+    height:130px;
     width:100px;
+      margin: auto;
+
     
         }
 
@@ -124,6 +125,7 @@ background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, F
 border: 1px solid #666;
 
 }
+
 
 
 /*for desktop*/
@@ -183,6 +185,7 @@ border: 1px solid #666;
 
       .game-play{
           overflow:scroll;
+          margin-left:10%;
       }
 
       button {
@@ -200,6 +203,9 @@ border: 1px solid #666;
     .moves-made{
         font-size:18px;
         
+    }
+    .final-card{
+        margin-left:155%;
     }
 }
 
@@ -222,7 +228,7 @@ border: 1px solid #666;
         }
 
         .game-play{
-                        padding-left:20%;
+          margin-left:10%;
 
         }
 
@@ -277,15 +283,14 @@ border: 1px solid #666;
 
 
 
-.game-card {
+/*.game-card {
     overflow: hidden;
     padding: 0;
     border: black;
     border-radius: .28571429rem;
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    height:100px;
-    width:100px;
-}
+  
+} */
 
 .show-img {
     visibility: visible;
