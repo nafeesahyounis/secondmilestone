@@ -79,8 +79,9 @@ body{
     -webkit-box-shadow: .2em .2em .5em #333;
     box-shadow: .2em .2em .5em #333;
     text-align:center;
-    font-family: 'Lora', serif;
-    overflow:hidden;
+font-family: 'Josefin Sans', sans-serif;    
+overflow:hidden;
+color:#404756;
     
 
 }
@@ -119,6 +120,10 @@ background-image: linear-gradient(to right top, #606b83, #667d90, #718f9b, #81a0
      -moz-box-shadow: .2em .2em .5em #333;
     -webkit-box-shadow: .2em .2em .5em #333;
     box-shadow: .2em .2em .5em #333;
+    font-family: 'Josefin Sans', sans-serif;    
+    color:#404756;
+
+
 
 
 }
@@ -139,6 +144,8 @@ background-image: linear-gradient(to right top, #606b83, #667d90, #718f9b, #81a0
      background-image: linear-gradient(to right top, #606b83, #667d90, #718f9b, #81a0a4, #96b1ad);
 
 border: 1px solid #666;
+font-family: 'Josefin Sans', sans-serif;    
+color:#404756;
 
 }
 
