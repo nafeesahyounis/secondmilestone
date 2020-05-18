@@ -35,31 +35,37 @@ var card2;
 //these variables will be used to keep track of how many moves have been made
 var score = 0;
 var totalGameMoves=document.getElementById('totalGameMoves');
+//variables for the different buttons: changing difficulty level, buttons on modals and restarting game
 var restartButton = document.getElementById('restartButton');
 var playAgainButton = document.getElementById('playAgain');
-var easyButton= document.getElementById('easy-button');
-var modalEasyButton= document.getElementById('modal-easy-button');
 
+var easyButton= document.getElementById('easy-button');
 var mediumButton= document.getElementById('medium-button');
+var hardButton= document.getElementById('hard-button');
+var modalEasyButton= document.getElementById('modal-easy-button');
 var modalMediumButton= document.getElementById('modal-medium-button');
+var modalHardButton= document.getElementById('modal-hard-button');
+
 
 //array for medium cards to be used when changing levels.
 var mediumRow=document.getElementsByClassName('row-medium');
 let mediumRowArray = [...mediumRow];
 var easyRow=document.getElementsByClassName('row-easy');
-
-var hardButton= document.getElementById('hard-button');
-var modalHardButton= document.getElementById('modal-hard-button');
-
+//array to be used when changing to hard difficulty level
 var hardRow=document.getElementsByClassName('row-hard');
 let hardRowArray = [...hardRow];
 
 var numberOfImages;
+
+//variable to keep track of number of matches. This will later be used to determine when player has won.
 var numberOfMatches = 0;
 
 //add event listeners to the difficulty buttons both in the game and modal in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
 modalEasyButton.addEventListener('click',changeToEasy);
+
+//player will firstly select their difficulty level, and then the correct rows will be loaded depending on difficulty level using the changeToEasy, changeToMedium and changeToHard functions.
+//changeLevel function will then take 
 
 function changeToEasy(){
 
@@ -92,8 +98,7 @@ function changeToMedium(){
         mediumRowArray[i].classList.remove('hidden');}
     for (let i = 0; i < hardRowArray.length; i++) {
         hardRowArray[i].classList.add('hidden');}
-    //mediumRow.classList.remove('hidden');
-    //hardRow.classList.add('hidden');
+    
     changeLevel(0,6);
 
     if (score>=1){
