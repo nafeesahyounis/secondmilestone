@@ -63,6 +63,22 @@ var numberOfMatches = 0;
 //add event listeners to the difficulty buttons both in the game and modal in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
 modalEasyButton.addEventListener('click',changeToEasy);
+//jquery taken from tutorialrepublic.com and modified for my usage to make modal appear when game starts giving instructions and asking for player to select difficulty
+$(document).ready(function(){
+            $("#startGameModal").modal('show');
+            $('#startGameModal').off()
+            $("#startGameModal").modal({
+                backdrop: static,
+                keyboard: false
+            });
+
+
+        });
+        $(function () {
+            $(".btnClosePopup").click(function () {
+                $("#startGameModal").modal("hide");
+            });
+        });
 
 //player will firstly select their difficulty level, and then the correct rows will be loaded depending on difficulty level using the changeToEasy, changeToMedium and changeToHard functions.
 //changeLevel function will then take 
@@ -156,12 +172,10 @@ function changeLevel(x,y){
     for(i=0; i<cardElementsArray.length; i++){
         cardElementsArray[i].innerHTML="";
     }
-    console.log(cardElementsArray);
     shuffle(allImages);
     var selection1=allImages.slice(x,y);
     var selection2=selection1.slice(x,y);
     var selection = selection1.concat(selection2);
-    console.log(selection);
     shuffle(selection);
 
     createImages(selection);
@@ -235,9 +249,11 @@ function startGame() {
 
 }
 
+//cards flip when clicked
+
 function flipEvent(){
-    console.log(this)
             this.children[0].classList.add('animated', 'flipInY');
+
 
 
 }
@@ -247,7 +263,6 @@ function flipEvent(){
 
 
 function displayCard() {
-    console.log(this);
     if (counter==0){
         counter=1;
         this.children[0].classList.remove('hidden');
@@ -265,7 +280,6 @@ function displayCard() {
 
 
 
-    console.log(card1,card2);
 
 
 }
@@ -283,7 +297,6 @@ function checkForMatch() {
 
        if (card1.src==card2.src){
            numberOfMatches = numberOfMatches+1
-            console.log(numberOfMatches)
            match();
        }
     else{
@@ -297,8 +310,7 @@ function checkForMatch() {
 
 function youHaveWon(){
     if ((numberOfImages/2) === numberOfMatches){
-        console.log(numberOfImages/2)
-        console.log(numberOfMatches)
+       
         $('#exampleModal').modal('show')
     //reset counter for next game play
         numberOfMatches = 0;
@@ -328,30 +340,10 @@ function unflipCards(){
 }
 
 
-//change difficulty selection
 
 
 
 
-
-
-//hardButton.addEventListener('click', changeToHard);
-
-
-//function changeToHard(){
-//    mediumRow.classList.remove('hidden');
-//hardRow.classList.remove('hidden');
-//    hardRow.classList.add('shuffle');
-
-//    startGame();
-//    for (let i = 0; i < imgElementsArray.length; i++) {
-//        imgElementsArray[i].classList.remove('show-img');}
-//    if (score>=1){
-//        score=0;
-//        totalGameMoves.innerHTML=score;
-//    }
-//    shuffleImages();
-//}
 
 
 window.onload = function () {
