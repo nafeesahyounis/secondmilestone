@@ -86,6 +86,7 @@ color:#404756;
 
 }
 
+
 /*game-card size for bigger screen sizes. The rest of the styling stays the same for all screens. */
 .game-card{
             display: inline-block;
@@ -103,7 +104,8 @@ color:#404756;
     height:130px;
     width:100px;
       margin: auto;
-      background-image: linear-gradient(to right top, #4b726d, #49717c, #586d83, #96B1AD, #96B1AD);
+            background-image: linear-gradient(to right top, #4b726d, #49717c, #586d83, #96B1AD, #96B1AD);
+
 
         }
 
@@ -203,6 +205,7 @@ color:#404756;
       .game-play{
           overflow:scroll;
           margin-left:10%;
+          margin-top:2%;
           
       }
 
@@ -222,9 +225,13 @@ color:#404756;
 /* see button */
     .level-choice{
         font-size:18px;
+        margin-left:5%;
+        margin-top:5%;
     }
     .moves-made{
         font-size:18px;
+                margin-left:5%;
+
         
     }
     
@@ -242,10 +249,11 @@ color:#404756;
             padding-top:5%;
         }
 
-        .game-play{
-          margin-left:10%;
+       .game-play{
+           margin-left:5%;
+                     margin-top:2%;
 
-        }
+       }
 
      
 
