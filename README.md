@@ -38,6 +38,17 @@ My goals as a developer are as follows:
 * To have well thought out programming that anticipates a person's lack of IT trouble-shooting skills, as the target audience is senior citizens.
 * To have a project that stands out both visually and functionally in my portfolio.
 
+**User Stories**
+
+As an older adult with minimum IT skills (who likes cats), I want:
+
+* To be able to understand the rules of the game quickly, and to have access to the rules whenever I don't remember without massively interrupting my game-play.
+* To not have to go through too many menu options or a complicated interface to reach the game. Minimum clicks possible.
+* To have an interface that isn't too fancy and doesn't have lots of animations. I want something functional, as I just want to play my game.
+* To have some measure of how I'm doing in the game in comparison to the last round, but nothing too stressful.
+* To be able to challenge myself, maybe with higher difficulty levels.
+* To smile when I turn each card over, because the image is cute and I want to see cats.
+* To have the option to know who made the game and contact them if need be.
 
 
 
