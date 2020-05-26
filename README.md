@@ -30,3 +30,14 @@ These goals were addressed in the following way:
 * The background and colour scheme of the game are visually appealing and clean in order to both relax and inspire the player. 
 
 
+**Developer and Business Goals**
+
+My goals as a developer are as follows:
+
+* To build a project using clean and concise Vanilla Javascript, in order to familiarise myself with the basics of the language without frameworks.
+* To have well thought out programming that anticipates a person's lack of IT trouble-shooting skills, as the target audience is senior citizens.
+* To have a project that stands out both visually and functionally in my portfolio.
+
+
+
+
