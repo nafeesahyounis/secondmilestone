@@ -296,7 +296,7 @@ function checkForMatch() {
 function youHaveWon(){
     if ((numberOfImages/2) === numberOfMatches){
         
-        $('#youHaveWonModal').modal('show')
+        $('#exampleModal').modal('show');
     //reset counter for next game play
         numberOfMatches = 0;
 
