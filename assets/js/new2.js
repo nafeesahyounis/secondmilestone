@@ -236,12 +236,12 @@ function startGame() {
 
 //cards flip when clicked
 
-//function flipEvent(){
-//            this.children[0].classList.add('animated', 'flipInY');
+function flipEvent(){
+           this.children[0].classList.add('animated', 'flipInY');
 
 
 
-//}
+}
 
 
 
