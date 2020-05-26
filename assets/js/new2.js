@@ -63,22 +63,7 @@ var numberOfMatches = 0;
 //add event listeners to the difficulty buttons both in the game and modal in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
 modalEasyButton.addEventListener('click',changeToEasy);
-//jquery taken from tutorialrepublic.com and modified for my usage to make modal appear when game starts giving instructions and asking for player to select difficulty
-$(document).ready(function(){
-            $("#startGameModal").modal('show');
-            $('#startGameModal').off()
-            $("#startGameModal").modal({
-                backdrop: static,
-                keyboard: false
-            });
 
-
-        });
-        $(function () {
-            $(".btnClosePopup").click(function () {
-                $("#startGameModal").modal("hide");
-            });
-        });
 
 //player will firstly select their difficulty level, and then the correct rows will be loaded depending on difficulty level using the changeToEasy, changeToMedium and changeToHard functions.
 //changeLevel function will then take 
@@ -251,12 +236,12 @@ function startGame() {
 
 //cards flip when clicked
 
-function flipEvent(){
-            this.children[0].classList.add('animated', 'flipInY');
+//function flipEvent(){
+//            this.children[0].classList.add('animated', 'flipInY');
 
 
 
-}
+//}
 
 
 
@@ -310,8 +295,8 @@ function checkForMatch() {
 
 function youHaveWon(){
     if ((numberOfImages/2) === numberOfMatches){
-       
-        $('#exampleModal').modal('show')
+        
+        $('#youHaveWonModal').modal('show')
     //reset counter for next game play
         numberOfMatches = 0;
 

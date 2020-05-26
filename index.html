@@ -14,7 +14,25 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
+   <script>
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+            $('#myModal').off()
+            $("#myModal").modal({
+                backdrop: static,
+                keyboard: false
+            });
+
+
+        });
+        $(function () {
+            $(".btnClosePopup").click(function () {
+                $("#myModal").modal("hide");
+            });
+        });
+
+
+    </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
 </style>
@@ -60,7 +78,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="youHaveWonModal" tabindex="-1" role="dialog">
+<div class="modal fade" id="youHaveWonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -78,6 +96,35 @@
     </div>
   </div>
 </div>
+<!--how to play modal-->
+<!--this modal was taken from bootstrap documentation and edited to serve purposes of the game. It pops up when user clicks on how to play and shows the user instructions-->
+<!-- Modal -->
+<div class="modal fade" id="howToPlayModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">How To Play</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <p> 1) Click on the cards and they will flip. Flip the cards to find matching pairs. </p>
+                <p> 2) When you have matched all the cards, you win the game. </p>
+                <p> 3) The 'Moves Made' section tracks how many moves it took you to win. </p>
+                <p> 4) Keep an eye on 'Moves Made' and if you want a challenge, try to beat your previous score! </p>
+        
+                <p> 5) If you want more challenge, choose 'Medium' or 'Hard' and you will have more cards to match! </p>
+                <p> 6) Made a mistake and want to try again? The 'restart' button will restart your game at the level you were on. </p>
+                <p> 7) Most importantly, HAVE FUN! </p> 
+                <p>        <button type="button" class="btn btn-secondary" data-dismiss="modal">Return to Game</button></p>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 
 <!--container for header/game title-->
 <div class="container">                    
@@ -95,12 +142,17 @@
                 <p>                    <button class="restart-button btn btn-success" id="restartButton">Restart ↻</button>
 <button id="easy-button" class="btn btn-info">Easy</button></p><p> <button id="medium-button" class="btn btn-primary">Medium</button> <button id="hard-button" class="btn btn-warning">Hard</button></p>
                 </p>
+                        <p><button class="btn btn-dark btn-lg" data-toggle="modal" data-target="#howToPlayModal">How To Play </button> </p>
+
                             </div> 
+
+                            
         <div class="moves-made">
 
                 <p class="modal-title">Moves Made</p>
                  <span id="totalGameMoves"></span> moves</p>
             </div>
+        
             
 
                 
