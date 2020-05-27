@@ -281,8 +281,16 @@ function countScore() {
 function checkForMatch() {
 
        if (card1.src==card2.src){
+           if (card1.parentElement.id==card2.parentElement.id){
+               mismatched();
+           }
+           else{
            numberOfMatches = numberOfMatches+1
+           console.log(card1.parentElement.id)
+           console.log(numberOfMatches)
            match();
+           }
+           
        }
     else{
         console.log("mismatch");
