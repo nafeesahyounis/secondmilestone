@@ -75,9 +75,9 @@ It was important when creating the design for the Cat-Matched game that the game
 * Image four: The main problem encountered when testing the images was their responsiveness. This image not only has a beautiful, calming feel to it, but it also looked good on larger screen sizes. It isn't so complex that it overpowers the game and takes away from the game-board, but instead draws the eye to the game-board which is why it was selected in the end. Of the 5, it most fit the design aims.
 * Image five: This image was tested alongside image two based on its vintage feel. However, although the image is beautiful it overpowered the game-play board, which is not great from a User Experience Perspective.
 
-The developer felt that Image four best fit the design brief. Below I outline how the colors were subsequently selected to complement the background and draw attention when needed. 
+The developer felt that Image four best fit the design brief. Below I outline how the colors and styling were subsequently selected to complement the background and draw attention when needed. 
 
-**Colors**
+**Colors & Styling**
 
 The background image was first selected and then ran through the site https://www.colorcodepicker.com/ . This site identified the primary colors in the background image, and these were added to https://mycolor.space/. Different palettes were generated using the palette generating tool, and eventually the following palettes and gradients were chosen:
 
@@ -114,8 +114,15 @@ A few bolder colors were added for emphasis and to ensure that the game-play for
 
 * A gentler gradient hue which harmonised with both the title and background image was used for the boxes of 'Moves Made' and 'Level Choice'. This was in order to complement the hierarchy, where the boldest colors are the game cards and the least bold as the containers. 
 
+### **Features**
+
+**Game Flow**
+
+There are three modals in the game. On the first modal, there are three buttons. On the game-play board, there are 5 buttons and on each subsequent modal there is a button that allow you to return to the game.
+
+Below is a Flowchart that outlines and summarises the overall game-play, and how the modals and buttons facilitate the user's interaction with the game and make for a smooth experience:
 
 
 <div align="center">
-    <img src="assets/images/Flowchar-game-features.png" alt="Instruction background colors" aria-label="Instruction background colors" />
+    <img src="assets/images/Flowchart-game-features.png" alt="Instruction background colors" aria-label="Instruction background colors" />
 </div>
