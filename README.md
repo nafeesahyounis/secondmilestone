@@ -52,7 +52,9 @@ As an older adult with minimum IT skills (who likes cats), I want:
 
 ### **Design Choices**
 
-The Cat-Matched game was designed to be a game that would be enjoyed by older adults and people who like cats. This could include younger people who like cats, and the following choices were made with that in mind:
+The Cat-Matched game was designed to be a game that would be enjoyed by older adults and people who like cats. This could include younger people who like cats, and design choices were made keeping that in mind.
+
+Choices were also made based on a design hierarchy, where the boldest element on the page should be the game-cards, followed by the titles & buttons, and then the boxes for the 'Moves Made' and 'Level Choice' containers. Colors and background-images were selected with this in mind. 
 
 **Fonts**
 
@@ -87,4 +89,33 @@ The background image was first selected and then ran through the site https://ww
     <img src="assets/images/background-colors-game-card.png" alt="Game Card Colors Image" aria-label="Game Card Colors Image" />
 </div>
 
-The focal point of the game should be the cards, which is why a gradient background was chosen which comprises of the colors above. 
+The focal point of the game should be the cards, which is why a gradient background was chosen which comprises of the colors above. It was identified that the target user would prefer gentler, less invasive colors, which is why a more neutral color scheme that invoked a sense of calm was selected. 
+
+A few bolder colors were added for emphasis and to ensure that the game-play foreground was elevated above the background image. It was important for the game-cards to be the boldest and most colorful on the page, as they are the highest point in the hierarchy and the focus of the program.
+
+* Game-card Images
+
+
+* Titles
+
+<div align="center">
+    <img src="assets/images/colors-instruction-background.png" alt="Instruction background colors" aria-label="Instruction background colors" />
+</div>
+
+* The main title and the titles for the 'Moves Made' section and 'Level Choice' section comprised of the above gradient. This was chosen as it was elevated enough over the foreground but not so much that it looked garish.
+
+* Borders and a slight shadown were added to the titles to emphasise them and elevate them over the background. It was important for the user aims of the game being functional that they stand out.
+
+* It is important that the user can get where they need to get to ASAP and that the game is intuitive, hence the extra emphasis added to titles. 
+
+<div align="center">
+    <img src="assets/images/moves-made-colors.png" alt="Moves Made Colors" aria-label="Moves Made Colors" />
+</div>
+
+* A gentler gradient hue which harmonised with both the title and background image was used for the boxes of 'Moves Made' and 'Level Choice'. This was in order to complement the hierarchy, where the boldest colors are the game cards and the least bold as the containers. 
+
+
+
+<div align="center">
+    <img src="assets/images/Flowchar-game-features.png" alt="Instruction background colors" aria-label="Instruction background colors" />
+</div>
