@@ -116,6 +116,8 @@ A few bolder colors were added for emphasis and to ensure that the game-play for
 
 ### **Features**
 
+**Existing Features**
+
 **Game Flow**
 
 There are three modals in the game. On the first modal, there are three buttons. On the game-play board, there are 5 buttons and on each subsequent modal there is a button that allow you to return to the game.
@@ -126,3 +128,16 @@ Below is a Flowchart that outlines and summarises the overall game-play, and how
 <div align="center">
     <img src="assets/images/Flowchart-game-features.png" alt="Instruction background colors" aria-label="Instruction background colors" />
 </div>
+
+Below is a more detailed breakdown about each feature:
+
+**Start Game Modal**
+
+* Upon arriving on the page for the first time, a modal appears which outlines the game rules and gives the player the option to choose the difficulty level of the game.
+
+* This modal has been programmed not to close until the player chooses which level they would like to play at 'Easy' 'Medium' or 'Hard'.
+
+* The default setting for modals is that if the user clicks outside of the box of clicks on the 'x' then the modal can be closed, but this has been disabled. This is because the program needs to know which level the player would like to play at before the player enter. This design choice was made to provide smoother user experience and minimum clicking and easier decision making for the user.
+
+
+
