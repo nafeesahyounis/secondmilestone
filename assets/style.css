@@ -58,8 +58,8 @@ body{
 
 /* overflow on main game page fixed by setting it to hidden for the bootstrap container*/
 .container{
-    overflow:hidden;
     max-width:100%;
+    overflow:hidden;
 }
 
   /*rows made max width 100% to prevent overflow */
@@ -198,6 +198,14 @@ color:#404756;
       .game-card{
           height:50px;
           width:50px;
+      }
+
+      .container{
+          overflow:visible;
+      }
+
+      .row{
+          overflow:visible;
       }
 
 /* on phone game board does not fit on one screen, so overflow is set to scroll so that player can scroll down to see game board. Horizontal overflow fixed in earlier css */
