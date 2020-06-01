@@ -167,8 +167,10 @@ function changeLevel(x,y){
     
 }
 
+//images from the selection made in changeLevel function are shuffled
+//img element is created in the html for each game-card, and the selected images are appended to the cards
+//class List of 'hidden' is added to each image, so that later in the game they only appear when clicked
 function createImages(images){
-    //create images
 
     // counter
     var i = 0;
@@ -204,6 +206,8 @@ startGame();
 
 
 restartButton.addEventListener('click',restartGame);
+
+//the playAgainButton appears when a player has won the game, so the same functionality is used here for the player to restart and play another round
 playAgainButton.addEventListener('click',restartGame);
 
 function restartGame(){
@@ -246,7 +250,9 @@ function flipEvent(){
 
 
 
-
+//this function ensures that only two cards can be flipped at the same time
+//when a card is clicked, the classList 'hidden' is removed and 'show-img' is added, so the card appears to flip over.
+//two cards, card1 and card2 are created, the values of which are the two cards that have been clicked. These cards will later be evaluated for a match. 
 function displayCard() {
     if (counter==0){
         counter=1;
@@ -269,7 +275,7 @@ function displayCard() {
 
 }
 
-//counter goes up one every time you click a card
+//moves made counter goes up one every time you click a card
 
 function countScore() {
     score++;
@@ -277,7 +283,9 @@ function countScore() {
 }
 
 
-
+//the image element of the two cards turned over are compared
+// *bug fix* if they are the same, the ids are subsequently compared to make sure they are different cards. Initially if the same card was clicked twice, the system would read it as a match. Ids have been added to distinguish between the different img elements that have the same .src but are different cards.
+// when a match is made, the numberOfMatches counter also goes up. This is so the game can calculate when the player has won. Once the correct number of matches according to the chosen level have been made, the youHaveWon function is triggered.
 function checkForMatch() {
 
        if (card1.src==card2.src){
@@ -286,20 +294,18 @@ function checkForMatch() {
            }
            else{
            numberOfMatches = numberOfMatches+1
-           console.log(card1.parentElement.id)
-           console.log(numberOfMatches)
+
            match();
            }
            
        }
     else{
-        console.log("mismatch");
         mismatched();
        }
        youHaveWon();
 }
 
-//functionality added to announce you've won
+//functionality added to announce the player has won. This triggers a modal that tells the player the game is over and resets the numberOfMatches to 0 so that the player can play again.
 
 function youHaveWon(){
     if ((numberOfImages/2) === numberOfMatches){
