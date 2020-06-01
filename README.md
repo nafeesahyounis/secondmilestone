@@ -139,5 +139,48 @@ Below is a more detailed breakdown about each feature:
 
 * The default setting for modals is that if the user clicks outside of the box of clicks on the 'x' then the modal can be closed, but this has been disabled. This is because the program needs to know which level the player would like to play at before the player enter. This design choice was made to provide smoother user experience and minimum clicking and easier decision making for the user.
 
+**Information Container**
 
+* The Information Container has two sections, the 'moves-made' section and the 'buttons' section, which contains difficulty selection buttons, a restart button, and a 'how to play' button.
 
+* On a smaller screen size, this container appears at the top of the screen and occupies roughly two thirds of the screen. There is an arrow at the bottom to tell the player to scroll down.
+
+**Difficulty Selection Buttons**
+
+* The difficulty selection buttons/level choice section is at the top of the information container.
+
+* There are three difficulty selection buttons, 'easy', 'medium' and 'hard'. The colors chosen for each button were different in order to clearly distinguish between the three levels.
+
+* When the player clicks on a button, the game is reset and cards reshuffled. For 'Easy' only 8 cards are displayed, for 'Medium' 12 cards, and for 'Hard' 16 cards.
+
+* The 'moves-made' counter is also reset when the player chooses a new difficulty level.
+
+**How to Play Button**
+
+* The 'How to Play' Button is larger than the difficulty buttons, as it is key that the older, target audience is able to access the instructions in case of any confusion.
+
+**How to Play Modal**
+
+* The 'How to Play' Modal appears when the button is pressed. If the player clicks on the 'x', outside of the box or 'Return to Game' they can leave this modal at any time and resume game-play.
+
+* In no way does clicking on the modal disrupt the game.
+
+**You Have Won Modal**
+
+* This Modal pops up when all cards have been matched. 
+
+* In order to start a new game, player can either hit 'Play Again' or click outside of box and hit reset. Instructions for this are given on the modal (see features to be implemented).
+
+**Restart Button**
+
+* The restart button is placed next to the difficulty selection buttons.
+
+* It resets the game by reshuffling the cards and setting the moves-made counter back to one.
+
+* It has been programmed so that it does not change the level, so it will reset the game on the level that the player is currently on to reduce clicks.
+
+**Game-Board & Cards**
+
+**Moves-Made Counter**
+
+**Footer**
