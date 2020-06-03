@@ -181,6 +181,79 @@ Below is a more detailed breakdown about each feature:
 
 **Game-Board & Cards**
 
+* On a larger screen size, the game-board is located on the right. It is where all the memory cards are displayed.
+
+* On a smaller screen size, it is below the information and selection buttons container.
+
+* On a larger screen size, the cards are laid out in a grid with four cards in each row. On a smaller screen size, there are three cards in each row.
+
+* On a larger screen size, the cards are bigger. On a smaller screen size, media queries have been used to make the cards smaller so that they fit more comfortably on the screen and remain visually appealing.
+
+* For level 'easy' there are 8 cards, so 4 by 4 on a larger screen, and 3-3-2 on a smaller screen.
+
+* For level 'medium' there are 12 cards, so 4-4-4 for a large screen, and 3-3-3-3 for smaller screens.
+
+* For level 'hard' there are 16 cards, so 4-4-4-4 for a large screen, and 3-3-3-3-3-1 on a small screen. The final card has been given its own row for a smaller screen size so that it could be styled in a way that it moves to the centre and therefore looks more professional on a smaller screen.
+
+* The adjustments in size were made so that the cards could be the largest possible on any given screen size, while still looking visually appealing. Functionality and ability to click for the player was prioritised foremost, and then adjustments were made to avoid scrolling or cards being squashed on smaller screens.
+
 **Moves-Made Counter**
 
+* The Moves Made counter add one every time a player flips over a card. This feature was added so that the player would have an additional level of challenge and be able to keep track of their own score, so that in future they can beat their previous moves.
+
+* See Features to be Implemented for info on planned development of this feature. 
+
 **Footer**
+
+* A footer was added with a link to the developer/designer's profile so that the player can contact the designer to make comments, ask questions or view more of their work. 
+
+
+**Features to be Implemented**
+
+Due to development time already running over the planned time limit, certain features that would enhance and streamline the game-play were left out. They are as follows:
+
+* Difficulty buttons & Restart Button: When a difficulty button is pressed, or restart button is pressed, a message should appear, potentially in the form of a modal, which first asks the player whether they are sure they wants to change levels. This message will warn the player that all previous info will be lost and the game will be restarted. It is necessary to implement this feature to avoid accidental clicks and frustration from losing progress in an existing game.
+
+* Moves-Made: In future, a feature will be implemented which stores the amount of moves made per game, potentially by making the player create a user name. This way they will have a record of their scores in the game, rather than having to note it down themselves.
+
+* You Have Won: Currently, when the modal for a player winning appears, the player must click play again or click outside of the modal and then press another button to restart the game. The developer tried to fix this feature and make it so that the player could not click outside of the modal, but this was soaking up a lot of time and the developer has prioritised deploying the existing game ASAP as it is already past deadline. This feature will be resolved at a later point.
+
+* Indication of Level Selection: When a level is selected, the button for that given level will be disabled and there will be an indicated (potentially by the button being greyed out) that the user is currently on 'Easy,' or 'Medium' etc.
+
+### **Technologies Used**
+
+* HTML, CSS and Javascript were the programming languages used to code this project.
+
+* [Bootstrap CDN](https://www.bootstrapcdn.com/) was used to make the layout of the website cleaner and more responsive.
+
+* [Google Fonts](https://fonts.google.com/) was used to style text on the website.
+
+* During the design process, 
+
+### **Testing**
+
+### **Deployment**
+
+Webstorm IDE was used in the initial stages to code this project. Half way through the Developer chose to switch to Gitpod, as this allowed the Developer to share her workspace and get better feedback during the development and testing stages.
+
+The project was then committed and pushed to Github using the command line and deployed on GitHub pages from the repository.
+
+In order to deploy the site, firstly I logged into GitHub Pages. Following this I chose nafeesahyounis/secondmilestone and then clicked on ‘Settings’. I then scrolled down to ‘Github Pages’ and changed the ‘Source’ to ‘master branch’. From this, the page automatically refreshed and I scrolled up and found the link to the deployed website.
+
+### Running the project locally
+
+In order to clone this project, it is necessary to follow these steps:
+
+1. Go to the [Project Repository](https://github.com/nafeesahyounis/secondmilestone).
+2. Click 'Clone or Download'.
+3. In the Clone with HTTPs section, click he clone URL for the repository.
+4. Open the Terminal and change the working directory to the location where you want the cloned directory to be made.
+5. Type git clone, and then paste the URL you copied in Step 2.
+
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+6. Press Enter.
+
+These instructions were taken from the following link: [Cloning a Repository](https://help.github.com/en/articles/cloning-a-repository).
+
+### **Credits**
