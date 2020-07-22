@@ -1,9 +1,3 @@
-//step 0: every time easy, medium or hard are clicked the arrays are reset and existing cards are deleted>> so maybe push cards out of array&add new cards in>>all[];selection[];
-//step1: create an array with all the image names eg cat.png etc, only one occurrence of each name
-//step2:select a number of card names depending on the level that has been clicked on> create an array that takes randomly x amount of images
-//step2.5: write a function that generates the game cards>> as many cards as you have images in the array using a for loop
-//step3: fill the cards with images
-
 //game variables
 //game-card for all images. Images are appended to this.
 let cardElements = document.getElementsByClassName('game-card');
@@ -67,12 +61,7 @@ modalEasyButton.addEventListener('click',changeToEasy);
 
 //player will firstly select their difficulty level, and then the correct rows will be loaded depending on difficulty level using the changeToEasy, changeToMedium and changeToHard functions.
 //changeLevel function will then take 
-function keepScore(){
-    if (score>=1){
-        score=0;
-        totalGameMoves.innerHTML=score;
-    }
-}
+
 function changeToEasy(){
 
     for (let i = 0; i < mediumRowArray.length; i++) {
@@ -83,12 +72,14 @@ function changeToEasy(){
 
 
          changeLevel(0,4)
-         keepScore()
 
 
 
 
-    
+    if (score>=1){
+        score=0;
+        totalGameMoves.innerHTML=score;
+    }
     console.log(selection.length)
 }
 
