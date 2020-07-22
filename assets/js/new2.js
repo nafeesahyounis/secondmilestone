@@ -82,7 +82,7 @@ function changeToEasy() {
 
 
     changeLevel(0, 4);
-
+    keepScore();
 
 
 
@@ -278,8 +278,6 @@ function checkForMatch() {
             mismatched();
         } else {
             numberOfMatches = numberOfMatches + 1
-            console.log(card1.parentElement.id)
-            console.log(numberOfMatches)
             match();
         }
 
