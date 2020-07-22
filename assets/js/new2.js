@@ -62,6 +62,13 @@ modalEasyButton.addEventListener('click',changeToEasy);
 //player will firstly select their difficulty level, and then the correct rows will be loaded depending on difficulty level using the changeToEasy, changeToMedium and changeToHard functions.
 //changeLevel function will then take 
 
+function keepScore(){
+    if (score>=1){
+        score=0;
+        totalGameMoves.innerHTML=score;
+    }
+
+}
 function changeToEasy(){
 
     for (let i = 0; i < mediumRowArray.length; i++) {
@@ -71,16 +78,12 @@ function changeToEasy(){
 
 
 
-         changeLevel(0,4)
+         changeLevel(0,4);
 
 
 
 
-    if (score>=1){
-        score=0;
-        totalGameMoves.innerHTML=score;
-    }
-    console.log(selection.length)
+    
 }
 
 mediumButton.addEventListener('click', changeToMedium);
@@ -96,10 +99,7 @@ function changeToMedium(){
     
     changeLevel(0,6);
 
-    if (score>=1){
-        score=0;
-        totalGameMoves.innerHTML=score;
-    }
+    keepScore()
 }
 
 hardButton.addEventListener('click', changeToHard);
@@ -115,15 +115,12 @@ function changeToHard(){
 
 
 
-    changeLevel(0,8)
+    changeLevel(0,8);
 
 
 
 
-    if (score>=1){
-        score=0;
-        totalGameMoves.innerHTML=score;
-    }
+    keepScore();
 }
 
 //select and shuffle cards based on difficulty level
