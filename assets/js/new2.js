@@ -215,15 +215,17 @@ function restartGame() {
 
 }
 
-
+var canYouClick = true;
 
 //display cards when game starts and initiate move counter
 function startGame() {
 
     for (let i = 0; i < cardElementsArray.length; i++) {
+        
         cardElementsArray[i].addEventListener('click', displayCard)
         cardElementsArray[i].addEventListener('click', countScore)
         cardElementsArray[i].addEventListener('click', flipEvent)
+    
 
 
     }
