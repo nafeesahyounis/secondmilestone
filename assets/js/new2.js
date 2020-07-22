@@ -19,7 +19,7 @@ var allImages = [
 
 //an empty array that the images will be placed in, depending on the difficulty level. So 4 images for easy,6 images for medium and 8 for
 //hard. This will change depending on which button is clicked (see changeLevel function)
-var selection=[];
+var selection = [];
 
 //these variables will be used to match the cards
 var counter = 0;
@@ -28,25 +28,25 @@ var card2;
 
 //these variables will be used to keep track of how many moves have been made
 var score = 0;
-var totalGameMoves=document.getElementById('totalGameMoves');
+var totalGameMoves = document.getElementById('totalGameMoves');
 //variables for the different buttons: changing difficulty level, buttons on modals and restarting game
 var restartButton = document.getElementById('restartButton');
 var playAgainButton = document.getElementById('playAgain');
 
-var easyButton= document.getElementById('easy-button');
-var mediumButton= document.getElementById('medium-button');
-var hardButton= document.getElementById('hard-button');
-var modalEasyButton= document.getElementById('modal-easy-button');
-var modalMediumButton= document.getElementById('modal-medium-button');
-var modalHardButton= document.getElementById('modal-hard-button');
+var easyButton = document.getElementById('easy-button');
+var mediumButton = document.getElementById('medium-button');
+var hardButton = document.getElementById('hard-button');
+var modalEasyButton = document.getElementById('modal-easy-button');
+var modalMediumButton = document.getElementById('modal-medium-button');
+var modalHardButton = document.getElementById('modal-hard-button');
 
 
 //array for medium cards to be used when changing levels.
-var mediumRow=document.getElementsByClassName('row-medium');
+var mediumRow = document.getElementsByClassName('row-medium');
 let mediumRowArray = [...mediumRow];
-var easyRow=document.getElementsByClassName('row-easy');
+var easyRow = document.getElementsByClassName('row-easy');
 //array to be used when changing to hard difficulty level
-var hardRow=document.getElementsByClassName('row-hard');
+var hardRow = document.getElementsByClassName('row-hard');
 let hardRowArray = [...hardRow];
 
 var numberOfImages;
@@ -56,34 +56,36 @@ var numberOfMatches = 0;
 
 //add event listeners to the difficulty buttons both in the game and modal in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
-modalEasyButton.addEventListener('click',changeToEasy);
+modalEasyButton.addEventListener('click', changeToEasy);
 
 
 //player will firstly select their difficulty level, and then the correct rows will be loaded depending on difficulty level using the changeToEasy, changeToMedium and changeToHard functions.
 //changeLevel function will then take 
 
-function keepScore(){
-    if (score>=1){
-        score=0;
-        totalGameMoves.innerHTML=score;
+function keepScore() {
+    if (score >= 1) {
+        score = 0;
+        totalGameMoves.innerHTML = score;
     }
 
 }
-function changeToEasy(){
+
+function changeToEasy() {
 
     for (let i = 0; i < mediumRowArray.length; i++) {
-        mediumRowArray[i].classList.add('hidden');}
+        mediumRowArray[i].classList.add('hidden');
+    }
     for (let i = 0; i < hardRowArray.length; i++) {
-        hardRowArray[i].classList.add('hidden');}
+        hardRowArray[i].classList.add('hidden');
+    }
 
 
 
-         changeLevel(0,4);
+    changeLevel(0, 4);
 
 
 
 
-    
 }
 
 mediumButton.addEventListener('click', changeToMedium);
@@ -91,13 +93,15 @@ modalMediumButton.addEventListener('click', changeToMedium);
 
 
 
-function changeToMedium(){
+function changeToMedium() {
     for (let i = 0; i < mediumRowArray.length; i++) {
-        mediumRowArray[i].classList.remove('hidden');}
+        mediumRowArray[i].classList.remove('hidden');
+    }
     for (let i = 0; i < hardRowArray.length; i++) {
-        hardRowArray[i].classList.add('hidden');}
-    
-    changeLevel(0,6);
+        hardRowArray[i].classList.add('hidden');
+    }
+
+    changeLevel(0, 6);
 
     keepScore()
 }
@@ -106,16 +110,18 @@ hardButton.addEventListener('click', changeToHard);
 modalHardButton.addEventListener('click', changeToHard);
 
 
-function changeToHard(){
+function changeToHard() {
 
     for (let i = 0; i < mediumRowArray.length; i++) {
-        mediumRowArray[i].classList.remove('hidden');}
+        mediumRowArray[i].classList.remove('hidden');
+    }
     for (let i = 0; i < hardRowArray.length; i++) {
-        hardRowArray[i].classList.remove('hidden');}
+        hardRowArray[i].classList.remove('hidden');
+    }
 
 
 
-    changeLevel(0,8);
+    changeLevel(0, 8);
 
 
 
@@ -129,7 +135,7 @@ function shuffle(array) {
         temporaryValue,
         randomIndex;
 
-    while (currentIndex !==0) {
+    while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
         temporaryValue = array[currentIndex];
@@ -143,22 +149,22 @@ function shuffle(array) {
 }
 //cut the array and put only 4 cards into the selection array, duplicate those cards into a new array, concat both arrays into
 //a new array - this new array will be used in the createImages function
-function changeLevel(x,y){
+function changeLevel(x, y) {
 
-    for(i=0; i<cardElementsArray.length; i++){
-        cardElementsArray[i].innerHTML="";
+    for (i = 0; i < cardElementsArray.length; i++) {
+        cardElementsArray[i].innerHTML = "";
     }
     shuffle(allImages);
-    var selection1=allImages.slice(x,y);
-    var selection2=selection1.slice(x,y);
+    var selection1 = allImages.slice(x, y);
+    var selection2 = selection1.slice(x, y);
     var selection = selection1.concat(selection2);
     shuffle(selection);
 
     createImages(selection);
-    
+
 }
 
-function createImages(images){
+function createImages(images) {
     //create images
 
     // counter
@@ -167,24 +173,23 @@ function createImages(images){
     // shuffle array
 
     shuffle(images);
-    
+
     // start preloading
-    for(i=0; i<images.length; i++)
-    {
+    for (i = 0; i < images.length; i++) {
         var imageObj = document.createElement('img');
-        imageObj.style.width ="100%";
-        imageObj.style.height ="100%";
-        imageObj.src=images[i];
+        imageObj.style.width = "100%";
+        imageObj.style.height = "100%";
+        imageObj.src = images[i];
         cardElementsArray[i].appendChild(imageObj);
         imageObj.classList.add('hidden');
 
 
     }
 
-    numberOfImages=images.length;
+    numberOfImages = images.length;
 
 
-startGame();
+    startGame();
 
 
 
@@ -194,23 +199,23 @@ startGame();
 //restart game depending on the level when restart button is clicked
 
 
-restartButton.addEventListener('click',restartGame);
-playAgainButton.addEventListener('click',restartGame);
+restartButton.addEventListener('click', restartGame);
+playAgainButton.addEventListener('click', restartGame);
 
-function restartGame(){
-    if (numberOfImages===8){
+function restartGame() {
+    if (numberOfImages === 8) {
         changeToEasy();
     }
-    if (numberOfImages===12){
+    if (numberOfImages === 12) {
         changeToMedium();
     }
-    if (numberOfImages===16){
+    if (numberOfImages === 16) {
         changeToHard();
     }
 
 }
 
-   
+
 
 //display cards when game starts and initiate move counter
 function startGame() {
@@ -227,8 +232,8 @@ function startGame() {
 
 //cards flip when clicked
 
-function flipEvent(){
-           this.children[0].classList.add('animated', 'flipInY');
+function flipEvent() {
+    this.children[0].classList.add('animated', 'flipInY');
 
 
 
@@ -237,23 +242,20 @@ function flipEvent(){
 
 
 
-
 function displayCard() {
-    if (counter==0){
-        counter=1;
+    if (counter == 0) {
+        counter = 1;
         this.children[0].classList.remove('hidden');
         this.children[0].classList.add('show-img');
-        card1=this.children[0];
-    }
-   else if (counter==1){
-        counter=2;
+        card1 = this.children[0];
+    } else if (counter == 1) {
+        counter = 2;
         this.children[0].classList.remove('hidden');
         this.children[0].classList.add('show-img');
-        card2=this.children[0];
+        card2 = this.children[0];
         checkForMatch();
-        counter=0;
+        counter = 0;
     }
-
 
 
 
@@ -264,57 +266,55 @@ function displayCard() {
 
 function countScore() {
     score++;
-    totalGameMoves.innerHTML=score;
+    totalGameMoves.innerHTML = score;
 }
 
 
 
 function checkForMatch() {
 
-       if (card1.src==card2.src){
-           if (card1.parentElement.id==card2.parentElement.id){
-               mismatched();
-           }
-           else{
-           numberOfMatches = numberOfMatches+1
-           console.log(card1.parentElement.id)
-           console.log(numberOfMatches)
-           match();
-           }
-           
-       }
-    else{
+    if (card1.src == card2.src) {
+        if (card1.parentElement.id == card2.parentElement.id) {
+            mismatched();
+        } else {
+            numberOfMatches = numberOfMatches + 1
+            console.log(card1.parentElement.id)
+            console.log(numberOfMatches)
+            match();
+        }
+
+    } else {
         console.log("mismatch");
         mismatched();
-       }
-       youHaveWon();
+    }
+    youHaveWon();
 }
 
 //functionality added to announce you've won
 
-function youHaveWon(){
-    if ((numberOfImages/2) === numberOfMatches){
-        
+function youHaveWon() {
+    if ((numberOfImages / 2) === numberOfMatches) {
+
         $('#exampleModal').modal('show');
-    //reset counter for next game play
+        //reset counter for next game play
         numberOfMatches = 0;
 
     }
 }
 // make sure that when cards flip back over there is a 1 second delay so that player can see both cards. Also initialise 'unflip'
-function mismatched(){
-    setTimeout(unflipCards,1000);
+function mismatched() {
+    setTimeout(unflipCards, 1000);
 }
 
 //if two cards have the same src element, remove Event Listener
-function match(){
-    
-    card1.parentElement.removeEventListener('click',displayCard);
-    card2.parentElement.removeEventListener('click',displayCard);
+function match() {
+
+    card1.parentElement.removeEventListener('click', displayCard);
+    card2.parentElement.removeEventListener('click', displayCard);
 }
 
 //un-flip cards that don't match
-function unflipCards(){
+function unflipCards() {
     card1.classList.remove('show-img');
     card1.classList.add('hidden');
 
@@ -326,12 +326,8 @@ function unflipCards(){
 
 
 
-
-
-
-
-window.onload = function () {
-        setTimeout(function() {
+window.onload = function() {
+    setTimeout(function() {
         startGame();
     }, 1200);
 }
