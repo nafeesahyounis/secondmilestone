@@ -2,7 +2,6 @@
 //game-card for all images. Images are appended to this.
 let cardElements = document.getElementsByClassName('game-card');
 let cardElementsArray = [...cardElements];
-console.log(cardElementsArray)
 
 
 //this array contains all of the images
@@ -178,13 +177,11 @@ function createImages(images) {
     // start preloading
     for (i = 0; i < images.length; i++) {
         var imageObj = document.createElement('img');
-        imageObj.classList.add('show-img')
-        imageObj.style.pointerEvents="none";
         imageObj.style.width = "100%";
         imageObj.style.height = "100%";
         imageObj.src = images[i];
         cardElementsArray[i].appendChild(imageObj);
-        // imageObj.classList.add('hidden');   
+        imageObj.classList.add('hidden');
 
 
     }
@@ -218,21 +215,16 @@ function restartGame() {
 
 }
 
-function aggregator(e){
-    console.log(e)
-    let card=e.target
-    displayCard(card);
-    countScore();
-}
+var canYouClick = true;
 
 //display cards when game starts and initiate move counter
 function startGame() {
 
     for (let i = 0; i < cardElementsArray.length; i++) {
         
-        cardElementsArray[i].addEventListener('click',(e)=> aggregator(e))
-        // cardElementsArray[i].addEventListener('click', countScore)
-        // cardElementsArray[i].addEventListener('click', flipEvent)
+        cardElementsArray[i].addEventListener('click', displayCard)
+        cardElementsArray[i].addEventListener('click', countScore)
+        cardElementsArray[i].addEventListener('click', flipEvent)
     
 
 
@@ -242,38 +234,31 @@ function startGame() {
 
 //cards flip when clicked
 
-//function flipEvent() {
-//    this.children[0].classList.add('animated', 'flipInY');
+function flipEvent() {
+    this.children[0].classList.add('animated', 'flipInY');
 
 
 
-//}
+}
 
 
-let userCanClick = true;
 
 
-function displayCard(clicked) {
-    console.log("displayCard")
-    if (userCanClick){
-        userCanClick = false;
-        if (counter == 0) {
-            counter = 1;
-            console.log(counter)
-            clicked.children[0].classList.remove('hidden');
-            clicked.children[0].classList.add('show-img');
-            card1 = clicked.children[0];
-        } else if (counter == 1) {
-            counter = 2;
-            console.log(counter)
-            clicked.children[0].classList.remove('hidden');
-            clicked.children[0].classList.add('show-img');
-            card2 = clicked.children[0];
-            checkForMatch();
-            counter = 0;
-        }
-        userCanClick = true;
+function displayCard() {
+    if (counter == 0) {
+        counter = 1;
+        this.children[0].classList.remove('hidden');
+        this.children[0].classList.add('show-img');
+        card1 = this.children[0];
+    } else if (counter == 1) {
+        counter = 2;
+        this.children[0].classList.remove('hidden');
+        this.children[0].classList.add('show-img');
+        card2 = this.children[0];
+        checkForMatch();
+        counter = 0;
     }
+
 
 
 
@@ -282,13 +267,8 @@ function displayCard(clicked) {
 //counter goes up one every time you click a card
 
 function countScore() {
-    console.log("countScore")
-    if (userCanClick){
-    userCanClick = false;
     score++;
     totalGameMoves.innerHTML = score;
-    userCanClick = true;
-}
 }
 
 
@@ -335,22 +315,11 @@ function match() {
 
 //un-flip cards that don't match
 function unflipCards() {
+    card1.classList.remove('show-img');
+    card1.classList.add('hidden');
 
-    let flippedCards = document.getElementsByClassName("show-img")
-    console.log("not working", flippedCards);
-    for (let i=0;i<flippedCards.length;i++){
-        console.log(flippedCards[i])
-        flippedCards[i].parentNode.removeChild(flippedCards[i]);
-        // flippedCards[i].classList.remove('show-img')
-        // flippedCards[i].classList.add('hidden')
-    }
-//     // console.log(card1)
-//      console.log(card2)
-//     card1.classList.remove('show-img');
-//     card1.classList.add('hidden');
-
-//     card2.classList.remove('show-img');
-//     card2.classList.add('hidden');
+    card2.classList.remove('show-img');
+    card2.classList.add('hidden');
 
 }
 
