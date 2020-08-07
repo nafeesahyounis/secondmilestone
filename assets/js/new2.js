@@ -224,7 +224,7 @@ function startGame() {
         
         cardElementsArray[i].addEventListener('click', displayCard)
         cardElementsArray[i].addEventListener('click', countScore)
-        cardElementsArray[i].addEventListener('click', flipEvent)
+        //cardElementsArray[i].addEventListener('click', flipEvent)
     
 
 
@@ -234,12 +234,12 @@ function startGame() {
 
 //cards flip when clicked
 
-function flipEvent() {
-    this.children[0].classList.add('animated', 'flipInY');
+//function flipEvent() {
+//   this.children[0].classList.add('animated', 'flipInY');
 
 
 
-}
+//}
 
 
 
@@ -303,7 +303,7 @@ function youHaveWon() {
 }
 // make sure that when cards flip back over there is a 1 second delay so that player can see both cards. Also initialise 'unflip'
 function mismatched() {
-    setTimeout(unflipCards, 1000);
+    setTimeout(unflipCards, 1);
 }
 
 //if two cards have the same src element, remove Event Listener
