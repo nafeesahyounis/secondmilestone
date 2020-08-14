@@ -49,6 +49,13 @@ body{
 
   }
 
+  footer{
+         background-color:#525252;
+         text-align:center;
+         color:white;
+         height:5%;
+         }
+
 /* initially when overflow was set to hidden, it wasn't possible to scroll down and see the rest of the game board, so it was changed to scroll in the container and this alongside the 100% width allows scrolling down but not sideways*/
   .container-fluid{
     max-width:100%;

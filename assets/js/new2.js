@@ -48,11 +48,31 @@ var easyRow = document.getElementsByClassName('row-easy');
 //array to be used when changing to hard difficulty level
 var hardRow = document.getElementsByClassName('row-hard');
 let hardRowArray = [...hardRow];
+var cardToBeTurned1;
+var cardToBeTurned2;
 
 var numberOfImages;
 
 //variable to keep track of number of matches. This will later be used to determine when player has won.
 var numberOfMatches = 0;
+
+//modal for beginning of gameplay taken from Tutorial Republic and edited for my purposes
+ $(document).ready(function(){
+             $("#myModal").modal('show');
+             $('#myModal').off()
+             $("#myModal").modal({
+                 backdrop: static,
+                 keyboard: false
+             });
+         
+         
+         });
+         $(function () {
+             $(".btnClosePopup").click(function () {
+                 $("#myModal").modal("hide");
+             });
+         });
+         
 
 //add event listeners to the difficulty buttons both in the game and modal in order to ascertain how many cards will appear and be shuffled
 easyButton.addEventListener('click', changeToEasy);
@@ -215,7 +235,6 @@ function restartGame() {
 
 }
 
-var canYouClick = true;
 
 //display cards when game starts and initiate move counter
 function startGame() {
@@ -224,7 +243,6 @@ function startGame() {
         
         cardElementsArray[i].addEventListener('click', displayCard)
         cardElementsArray[i].addEventListener('click', countScore)
-        //cardElementsArray[i].addEventListener('click', flipEvent)
     
 
 
@@ -232,14 +250,6 @@ function startGame() {
 
 }
 
-//cards flip when clicked
-
-//function flipEvent() {
-//   this.children[0].classList.add('animated', 'flipInY');
-
-
-
-//}
 
 
 
@@ -277,6 +287,8 @@ function checkForMatch() {
 
     if (card1.src == card2.src) {
         if (card1.parentElement.id == card2.parentElement.id) {
+            cardToBeTurned1 = card1;
+            cardToBeTurned2 = card2;
             mismatched();
         } else {
             numberOfMatches = numberOfMatches + 1
@@ -284,7 +296,8 @@ function checkForMatch() {
         }
 
     } else {
-        console.log("mismatch");
+        cardToBeTurned1 = card1;
+        cardToBeTurned2 = card2;
         mismatched();
     }
     youHaveWon();
@@ -303,7 +316,7 @@ function youHaveWon() {
 }
 // make sure that when cards flip back over there is a 1 second delay so that player can see both cards. Also initialise 'unflip'
 function mismatched() {
-    setTimeout(unflipCards, 1);
+    setTimeout(unflipCards, 1000);
 }
 
 //if two cards have the same src element, remove Event Listener
@@ -315,11 +328,11 @@ function match() {
 
 //un-flip cards that don't match
 function unflipCards() {
-    card1.classList.remove('show-img');
-    card1.classList.add('hidden');
+    cardToBeTurned1.classList.remove('show-img');
+    cardToBeTurned1.classList.add('hidden');
 
-    card2.classList.remove('show-img');
-    card2.classList.add('hidden');
+    cardToBeTurned2.classList.remove('show-img');
+    cardToBeTurned2.classList.add('hidden');
 
 }
 

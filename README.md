@@ -232,9 +232,7 @@ Due to development time already running over the planned time limit, certain fea
 
 * [Google Fonts](https://fonts.google.com/) was used to style text on the website.
 
-* During the design process, 
 
-### **Testing**
 
 
 ### **Deployment**
@@ -262,3 +260,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 These instructions were taken from the following link: [Cloning a Repository](https://help.github.com/en/articles/cloning-a-repository).
 
 ### **Credits**
+
+- The background image was taken from [Pixabay](https://pixabay.com/).
+
+- Some Jquery for modals was taken from [TutorialRepublic](https://www.tutorialrepublic.com/faq/how-to-prevent-bootstrap-modal-from-closing-when-clicking-outside.php).
