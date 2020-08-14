@@ -6,6 +6,10 @@
 
 ## Testing
 
+### Development of project
+
+This project was due in November, 2019. However, it has taken nearly ten months to complete. It was 
+
 ### User Stories Testing
 
 
@@ -59,3 +63,6 @@ The following validators were used to check the code:
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Generally this worked great in terms of making sure there were no major errors in the CSS. It did pick up one error, where it said that the media queries are deprecated. I searched for the latest documentation but could not find anything substantial online. Due to the heavy time-boxing of the project, I decided to leave this as media queries were only really used for the hero images and once the appropriate documentation is found it should be a quick fix, but I didn't want to delay submission based on this.
 
 
+### Known Issues
+
+- There is currently a bug in the game where if you click the cards too quickly, one of the cards gets stuck. Various code was implemented in order to address this
