@@ -115,8 +115,6 @@ The focal point of the game should be the cards, which is why a gradient backgro
 
 A few bolder colors were added for emphasis and to ensure that the game-play foreground was elevated above the background image. It was important for the game-cards to be the boldest and most colorful on the page, as they are the highest point in the hierarchy and the focus of the program.
 
-* Game-card Images
-
 
 * Titles
 
