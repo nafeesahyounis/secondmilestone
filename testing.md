@@ -54,7 +54,7 @@ The following validators were used to check the code:
 
 ### Known Issues
 
-- There is currently a bug in the game where if you click the cards too quickly, one of the cards gets stuck. Various code was implemented in order to address this, but the bug still remains unresolved. Here were some of the attempts. Please note indentation is not included in code here in the testing file:
+- There is currently a bug in the game where if you click the cards too quickly, one of the cards gets stuck. Various code was implemented in order to address this, but the bug still remains unresolved. Here were some of the attempts:
 
 1) I tried to implement a boolean around the event listener & the functions that controlled the card flipping so that the next card could not be clicked before the first function was done running, like so:
 

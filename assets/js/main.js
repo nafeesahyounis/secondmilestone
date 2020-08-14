@@ -6,14 +6,14 @@ let cardElementsArray = [...cardElements];
 
 //this array contains all of the images
 var allImages = [
-    "assets/images/island.png",
-    "assets/images/cat-reading.png",
-    "assets/images/cuty-cats.png",
-    "assets/images/sleeping-kitty.png",
-    "assets/images/little-cat.png",
-    "assets/images/cat.png",
-    "assets/images/pirate.png",
-    "assets/images/ship.png",
+    "assets/images/cards/forlorn-cat.png",
+    "assets/images/cards/cat-reading.png",
+    "assets/images/cards/cuty-cats.png",
+    "assets/images/cards/sleeping-kitty.png",
+    "assets/images/cards/little-cat.png",
+    "assets/images/cards/cat.png",
+    "assets/images/cards/cat-in-a-pan.png",
+    "assets/images/cards/party-cat.png",
 
 ];
 
@@ -99,12 +99,8 @@ function changeToEasy() {
         hardRowArray[i].classList.add('hidden');
     }
 
-
-
     changeLevel(0, 4);
     keepScore();
-
-
 
 }
 
@@ -122,7 +118,6 @@ function changeToMedium() {
     }
 
     changeLevel(0, 6);
-
     keepScore()
 }
 
@@ -142,10 +137,6 @@ function changeToHard() {
 
 
     changeLevel(0, 8);
-
-
-
-
     keepScore();
 }
 
