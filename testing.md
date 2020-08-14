@@ -65,40 +65,62 @@ The following validators were used to check the code:
 
 ### Known Issues
 
-- There is currently a bug in the game where if you click the cards too quickly, one of the cards gets stuck. Various code was implemented in order to address this, but the bug still remains unresolved. Here were some of the attempts:
+- There is currently a bug in the game where if you click the cards too quickly, one of the cards gets stuck. Various code was implemented in order to address this, but the bug still remains unresolved. Here were some of the attempts. Please note indentation is not included in code here in the testing file:
 
 1) I tried to implement a boolean around the event listener & the functions that controlled the card flipping so that the next card could not be clicked before the first function was done running, like so:
 
 let userCanClick = true;
 
 function displayCard() {
+    
     if (userCanClick){
+       
         userCanClick = false;
+       
         if (counter == 0) {
+        
             counter = 1;
-            console.log(counter)
+
             this.children[0].classList.remove('hidden');
+
             this.children[0].classList.add('show-img');
+
             card1 = this.children[0];
+        
         } else if (counter == 1) {
+            
             counter = 2;
+            
             console.log(counter)
+            
             this.children[0].classList.remove('hidden');
+            
             this.children[0].classList.add('show-img');
+            
             card2 = this.children[0];
+           
             checkForMatch();
+            
             counter = 0;
+        
         }
+        
         userCanClick = true;
+   
     }
 
 This did not work. We also tried creating one function for all the event listeners, as maybe the multiple listeners were interfering:
 
 function aggregator(e){
+    
     console.log(e)
+    
     let card=e.target
+    
     displayCard(card);
+    
     countScore();
+
 }
 
 cardElementsArray[i].addEventListener('click',(e)=> aggregator(e))
@@ -106,7 +128,9 @@ cardElementsArray[i].addEventListener('click',(e)=> aggregator(e))
 We also tried to change the setTimeout:
 
 function mismatched() {
+    
     setTimeout(unflipCards, 1);
+
 }
 
 These were three of the attempts that were made and were unsuccessful. I have tried many variations of these and as of yet am unable to solve the issue, so have decided to leave it for now as the project is very overdue and come back to it.
