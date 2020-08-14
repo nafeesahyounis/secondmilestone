@@ -54,9 +54,10 @@ As an older adult with minimum IT skills (who likes cats), I want:
 * To smile when I turn each card over, because the image is cute and I want to see cats.
 * To have the option to know who made the game and contact them if need be.
 
-###Wireframe
+### Wireframe
 
-[Home](https://raw.githubusercontent.com/nafeesahyounis/secondmilestone/master/assets/images/catmatched.pdf) 
+[Home](https://ibb.co/93Wpsgb) 
+
 ### **Design Choices**
 
 The Cat-Matched game was designed to be a game that would be enjoyed by older adults and people who like cats. This could include younger people who like cats, and design choices were made keeping that in mind.
