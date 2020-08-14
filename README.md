@@ -9,7 +9,17 @@ Cat-Matched is an easy to use, intuitive card-matching memory game aimed at olde
 
 ## **Important Note About the Development of this project**
 
-This project was due in November, 2019. However, it has taken nearly ten months to complete. It was 
+This project was due in November, 2019. However, it has taken nearly ten months to complete. It was a difficult journey with many ups and downs and a lot of rewriting.
+
+- Initially, the plan was to implement the project using html canvas and pixi.js. A number of resources such as Foundation Game Design by Rex Van Der Spuy [linkhere](https://www.apress.com/gp/book/9781430247166) were used at the beginning of the project. After much experimentation, I found that it was not efficient to use canvas as it was difficult to work with the DOM. Also, my skill-level was not advanced enough for many of the concepts. I believe at this stage I could potentially use canvas, but it was overreaching in the early stages, so after much trial and error I decided to go with a conventional html & js approach.
+
+- I chose to use Vanilla js instead of Jquery as it was key for me to really learn the fundamentals of the language.
+
+- At the beginning of the project, I built the project so that the images were already in the HTML & the classes got toggled in the HTML. However, this resulted in in repeated errors in terms of the images being loaded. I troubleshooted this alone for over a month, and sought help from various sources and various tutors. We were unable to resolve the issue initially. Eventually it was suggested that I rewrite the code and take the images out of the HTML and load them in the Javascript. This added substantially to the development time, but resolved the issue.
+
+- Many breaks were also taken during this project as it took a very long time to resolve problems. There is still an existing bug which has been documented in the testing file, but as it is already late in terms of submission I have chosen to overlook this as basic gameplay is fine.
+
+- Although the process was long and filled with issues, I am glad that I underwent it and now feel more confident with the language and determining logic in general. 
 
 # **UX**
 ___
@@ -241,7 +251,9 @@ Due to development time already running over the planned time limit, certain fea
 * [Google Fonts](https://fonts.google.com/) was used to style text on the website.
 
 
+### Testing
 
+The testing file can be found at [TESTING.md](https://github.com/nafeesahyounis/secondmilestone/blob/master/testing.md).
 
 ### **Deployment**
 
