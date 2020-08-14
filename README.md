@@ -7,6 +7,10 @@
 
 Cat-Matched is an easy to use, intuitive card-matching memory game aimed at older adults with minimal IT skills who like cats and want something easy and functional to play with. The game can also be enjoyed by younger adults who like cats and are looking for a quick, easy-to-play game that requires minimum skill and will break through the mundanity of their every-day lives.
 
+## **Important Note About the Development of this project**
+
+This project was due in November, 2019. However, it has taken nearly ten months to complete. It was 
+
 # **UX**
 ___
 ## **Project Goals**

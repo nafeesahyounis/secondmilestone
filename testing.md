@@ -1,18 +1,7 @@
-#Cat-Matched Testing Details
-
-- moved the setTimeout from mismatched into unflipCards:
-
-- 
 
 ## Testing
 
-### Development of project
-
-This project was due in November, 2019. However, it has taken nearly ten months to complete. It was 
-
 ### User Stories Testing
-
-
 
 1) **As an older adult with minimum IT skills (who likes cats), I want to be able to understand the rules of the game quickly, and to have access to the rules whenever I don't remember without massively interrupting my game-play.**
 
